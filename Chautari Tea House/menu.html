@@ -46,6 +46,7 @@ button{font-family:inherit}
 
 section{padding:1.6rem 0 .2rem}
 .tagh{display:inline-block;background:#000;color:#fff;font-weight:700;font-size:1.2rem;padding:.35rem 1.5rem .35rem 1.1rem;margin-bottom:.8rem;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 50%,calc(100% - 16px) 100%,0 100%)}
+.hint{background:#000;color:var(--butter);font-weight:500;font-size:.95rem;padding:.6rem 1rem;border-radius:12px;margin-bottom:.8rem}
 .grid{display:grid;gap:.8rem}
 @media(min-width:700px){.grid{grid-template-columns:1fr 1fr;gap:1rem}}
 
@@ -140,16 +141,17 @@ const sl=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const M=[
  ["Milk tea","🍵",[["Plain tea",40,"Classic hot milk tea, strong and comforting."],["Ginger tea",45,"Milk tea with a warm ginger bite."],["Masala tea",50,"Spiced chai with a fragrant kick.","pick"],["Matka tea",70,"Chai served in a clay pot for an earthy taste.","pick"]]],
  ["Black tea","🫖",[["Plain tea",30,"Light and clean, no milk."],["Ginger tea",35,"Black tea with a ginger bite."],["Lemon tea",40,"Black tea with a squeeze of lemon."],["Masala tea",40,"Spiced black tea, no milk."],["Ginger lemon tea",45,"Ginger and lemon, soothing on a cool evening."]]],
+ ["Coffee","☕",[["Black coffee",70,"Strong, simple and no milk."],["Milk coffee",90,"Smooth, creamy hot coffee."],["Iced black coffee",120,"Bold black coffee over ice."],["Iced coffee",150,"Cold, smooth coffee over ice."]]],
  ["Hot brews","🌿",[["Green tea",60,"Light, fresh and gentle."],["Chamomile tea",80,"A calming floral cup."],["Peach tea",80,"Sweet, fruity and smooth."],["Jasmine tea",80,"Fragrant and floral."],["Hibiscus tea",80,"Tangy, ruby-red herbal cup."],["Hot lemon with honey",120,"Warm, sweet and soothing."]]],
- ["Cold cups","🧊",[["Lemonade",70,"Fresh, tangy and ice cold."],["Cold lemon",90,"A sharp, refreshing lemon cooler."],["Plain lassi",100,"Thick, creamy and cooling."],["Iced peach tea",150,"Chilled tea with a peachy sweetness."],["Virgin mojito",150,"Mint, lime and fizz, no alcohol.","pick"],["Iced coffee",150,"Cold, smooth coffee over ice."]]],
- ["Quick bites","🍟",[["Cookies",100,"A sweet crunch to go with your tea."],["Veg pakoda",100,"Crispy fried vegetable fritters."],["Noodle sadeko",110,"Spicy Nepali-style noodle salad."],["Cheese fries",150,"Crisp fries under melted cheese.","pick"],["PeriPeri fries",150,"Fries tossed in peri-peri spice."],["Spicy spiral fries",150,"Curly fries with a spicy kick."]]],
- ["Heavy hitters","🥟",[["Aalu chop",120,"Spiced potato fritter, a Nepali favourite."],["Peanuts sadeko",130,"Crunchy peanuts with onion, chilli and lime."],["Buff momo",130,"Steamed dumplings with buff filling.","pick"],["Chicken momo",140,"Steamed dumplings with chicken filling.","pick"],["Fried sausages",200,"Golden fried sausages, great to share."]]],
+ ["Cold cups","🧊",[["Lemonade",70,"Fresh, tangy and ice cold."],["Cold lemon",100,"A sharp, refreshing lemon cooler."],["Plain lassi",100,"Thick, creamy and cooling."],["Iced peach tea",150,"Chilled tea with a peachy sweetness.","pick"],["Virgin mojito",150,"Mint, lime and fizz, no alcohol."]]],
+ ["Quick bites","🍟",[["Cookies",100,"A sweet crunch to go with your tea."],["Veg pakoda",100,"Crispy fried vegetable fritters."],["Noodle sadeko",110,"Spicy Nepali-style noodle salad."],["Cheese fries",150,"Crisp fries under melted cheese."],["PeriPeri fries",150,"Fries tossed in peri-peri spice.","pick"],["Spicy spiral fries",150,"Curly fries with a spicy kick."]]],
+ ["Heavy hitters","🥟",[["Aalu chop",120,"Spiced potato fritter, a Nepali favourite."],["Peanuts sadeko",130,"Crunchy peanuts with onion, chilli and lime."],["Buff momo",140,"Steamed dumplings with buff filling.","pick"],["Chicken momo",140,"Steamed dumplings with chicken filling.","pick"],["Fried sausages",200,"Golden fried sausages, great to share."]]],
  ["Hukka and smoke","💨",[["Shikar Ice",25,""],["Surya",30,""],["Additional coal normal",50,""],["Additional coal Kaloud",80,""],["Normal hukka",350,""],["Kaloud hukka",499,""]]]
 ];
 /* Real photo used for every item in a category until its own photo exists */
 const FALLBACK={"Milk tea":"images/menu/chai.jpg"};
 /* Suggested add-on when an order has no food yet */
-const UPSELL=["Heavy hitters","Buff momo",130];
+const UPSELL=["Heavy hitters","Buff momo",140];
 /* Hookah offer every Friday and Saturday (Nepal time) */
 const FRI=['Fri','Sat'].includes(new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Kathmandu',weekday:'short'}).format(new Date()));
 const OFFER={'Normal hukka':175,'Kaloud hukka':250};
@@ -162,7 +164,7 @@ const C={};
 const label=(c,n)=>/^(Milk|Black) tea$/.test(c)?`${c}: ${n}`:n+(OFFER[n]&&FRI?' (Fri/Sat offer)':'');
 M.forEach(([cat,ico,items])=>{
  const id=sl(cat),s=document.createElement('section');s.id=id;
- s.innerHTML=`<h2 class="tagh">${cat}</h2><div class="grid"></div>`;
+ s.innerHTML=`<h2 class="tagh">${cat}</h2>${cat==='Hukka and smoke'?`<div class="hint">${FRI?'Offer on now: 50% off today. Normal Rs. 175, Kaloud Rs. 250.':'50% off every Friday and Saturday: Normal Rs. 175, Kaloud Rs. 250.'}</div>`:''}<div class="grid"></div>`;
  items.forEach(([n,p0,d,pk])=>{
   const o=FRI&&OFFER[n],p=o||p0,k=cat+'|'+n,c=document.createElement('div');
   c.className='card'+(o?' hot':'');

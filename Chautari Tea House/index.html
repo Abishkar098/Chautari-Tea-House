@@ -103,7 +103,7 @@
 
 <script>
 const $=s=>document.querySelector(s),WA='9779821878239',R=n=>'Rs. '+(Number.isInteger(n)?n:n.toFixed(2));
-const M={"Milk tea":[["Plain tea",40],["Ginger tea",45],["Masala tea",50],["Matka tea",70]],"Black tea":[["Plain tea",30],["Ginger tea",35],["Lemon tea",40],["Masala tea",40],["Ginger lemon tea",45]],"Hot brews":[["Green tea",60],["Chamomile tea",80],["Peach tea",80],["Jasmine tea",80],["Hibiscus tea",80],["Hot lemon with honey",120]],"Cold cups":[["Lemonade",70],["Cold lemon",90],["Plain lassi",100],["Iced peach tea",150],["Virgin mojito",150],["Iced coffee",150]],"Quick bites":[["Cookies",100],["Veg pakoda",100],["Noodle sadeko",110],["Cheese fries",150],["PeriPeri fries",150],["Spicy spiral fries",150]],"Heavy hitters":[["Aalu chop",120],["Peanuts sadeko",130],["Buff momo",130],["Chicken momo",140],["Fried sausages",200]],"Hukka and smoke":[["Shikar Ice",25],["Surya",30],["Additional coal normal",50],["Additional coal Kaloud",80],["Normal hukka",350],["Kaloud hukka",499]]};
+const M={"Milk tea":[["Plain tea",40],["Ginger tea",45],["Masala tea",50],["Matka tea",70]],"Black tea":[["Plain tea",30],["Ginger tea",35],["Lemon tea",40],["Masala tea",40],["Ginger lemon tea",45]],"Coffee":[["Black coffee",70],["Milk coffee",90],["Iced black coffee",120],["Iced coffee",150]],"Hot brews":[["Green tea",60],["Chamomile tea",80],["Peach tea",80],["Jasmine tea",80],["Hibiscus tea",80],["Hot lemon with honey",120]],"Cold cups":[["Lemonade",70],["Cold lemon",100],["Plain lassi",100],["Iced peach tea",150],["Virgin mojito",150]],"Quick bites":[["Cookies",100],["Veg pakoda",100],["Noodle sadeko",110],["Cheese fries",150],["PeriPeri fries",150],["Spicy spiral fries",150]],"Heavy hitters":[["Aalu chop",120],["Peanuts sadeko",130],["Buff momo",140],["Chicken momo",140],["Fried sausages",200]],"Hukka and smoke":[["Shikar Ice",25],["Surya",30],["Additional coal normal",50],["Additional coal Kaloud",80],["Normal hukka",350],["Kaloud hukka",499]]};
 // Hookah offer every Friday and Saturday (Nepal time): Normal Rs. 175, Kaloud Rs. 250
 const FRI=['Fri','Sat'].includes(new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Kathmandu',weekday:'short'}).format(new Date())),HK=['Normal hukka','Kaloud hukka'];
 const px=(c,n,p)=>FRI&&c==='Hukka and smoke'&&HK.includes(n)?{'Normal hukka':175,'Kaloud hukka':250}[n]:p;
@@ -120,7 +120,7 @@ function show(cat){
   document.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected',t.dataset.c===cat));
   const a=document.querySelector('.tab[aria-selected=true]'),T=$('#tabs');if(a)T.scrollTo({left:a.offsetLeft-(T.clientWidth-a.offsetWidth)/2,behavior:'smooth'});
   const L=$('#list');L.innerHTML='';
-  $('#hknote').hidden=!(FRI&&cat==='Hukka and smoke');$('#hknote').textContent='Hookah offer on now: Normal Rs. 175, Kaloud Rs. 250. Prices below are already the offer prices.';
+  $('#hknote').hidden=cat!=='Hukka and smoke';$('#hknote').textContent=FRI?'Hookah offer on now: 50% off. Normal Rs. 175, Kaloud Rs. 250. Prices below are already the offer prices.':'Hookah is 50% off every Friday and Saturday: Normal Rs. 175, Kaloud Rs. 250.';
   M[cat].forEach(([n,p0])=>{const p=px(cat,n,p0),hk=p!==p0;
     const r=document.createElement('div');r.className='row'+(hk?' hot':'');
     r.innerHTML=`<b>${n}</b><span>${hk?`<s>${R(p0)}</s>`:''}${R(p)}</span><button class="add" aria-label="Add ${n} to order">+</button>`;
