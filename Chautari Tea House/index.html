@@ -1,725 +1,177 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chautari Tea House - Authentic Nepalese flavors in Bharatpur, Chitwan. Experience the finest Masala Chai, Momos, and a serene ambiance at NGO Road.">
-    <title>Chautari Tea House | Bharatpur, Chitwan</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Chautari Tea House | Bharatpur, Chitwan</title>
+<meta name="description" content="Masala chai, momos and a calm courtyard on NGO Road, Bharatpur. Open daily 7 AM to 9 PM.">
+<meta name="theme-color" content="#A3B88C">
+<meta property="og:title" content="Chautari Tea House | Bharatpur, Chitwan">
+<meta property="og:description" content="Where every cup tells a story. Tea, momos and fries on NGO Road, Bharatpur.">
+<meta property="og:image" content="https://www.chautariteahouse.com.np/images/IMG_1399.jpg">
+<link rel="icon" href="images/logo.JPG">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Chautari Tea House","url":"https://www.chautariteahouse.com.np","telephone":"+9779821878239","image":"https://www.chautariteahouse.com.np/images/IMG_1399.jpg","address":{"@type":"PostalAddress","streetAddress":"NGO Road","addressLocality":"Bharatpur","addressRegion":"Chitwan","postalCode":"44200","addressCountry":"NP"},"openingHours":"Mo-Su 07:00-21:00"}</script>
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="loader">
-            <i class="fas fa-mug-hot"></i>
-        </div>
-    </div>
-    <!-- Floating Action Button -->
-    <a href="https://wa.me/9779821878239" target="_blank" class="floating-btn" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+<body id="top">
+<header class="nav"><div class="wrap">
+<a class="brand" href="#top"><img src="images/logo.JPG" alt="Chautari Tea House logo" width="46" height="46"><span>Chautari</span></a>
+<nav id="links"><a href="#menu">Menu</a><a href="#story">Our story</a><a href="#gallery">Gallery</a><a href="#visit">Visit</a><a class="btn sm" href="#menu">Order now</a></nav>
+<a class="btn sm navmenu" href="#menu">Menu</a>
+<button id="burger" aria-label="Open navigation" aria-expanded="false"><i></i><i></i><i></i></button>
+</div></header>
 
-    <!-- Toast Notification -->
-    <div id="toast" class="toast"><i class="fas fa-check-circle"></i> <span id="toast-msg">Success!</span></div>
+<main>
+<section class="hero"><div class="wrap">
+<div>
+<div class="status" id="status"><i></i><span>Open daily 7 AM to 9 PM</span></div>
+<h1>Where every cup tells a story.</h1>
+<p class="lead">Masala chai, momos and crisp fries in a canopy-lit courtyard on NGO Road, Bharatpur.</p>
+<div class="cta"><a class="btn" href="#menu">See the menu</a><a class="btn ghost" href="#today">Today at Chautari</a></div>
+</div>
+<div class="tagwrap"><div class="tag"><img src="images/IMG_1399.jpg" alt="Lounge corner with brick wall, wicker lamps and a Persian rug" fetchpriority="high"></div><a class="deal" href="#menu" id="deal"><span class="dk" id="dk">Hookah offer, every Friday and Saturday</span><div class="dp"><div><small>Normal hookah</small><s>Rs. 350</s><b>Rs. 175</b></div><div><small>Kaloud hookah</small><s>Rs. 499</s><b>Rs. 250</b></div></div></a></div>
+</div></section>
 
-    <header class="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="#home" style="display: flex; align-items: center; gap: 10px;">
-                    <img src="images/logo.JPG" alt="Logo" style="height: 50px; width: 50px; border-radius: 50%; object-fit: cover;">
-                    <div style="display: flex; flex-direction: column; line-height: 1;">Chautari<span>Tea House</span></div>
-                </a>
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">Story</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
-                    <li><a href="#reservation" class="btn-nav">Book Table</a></li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <div class="nav-icons">
-                    <button id="theme-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
-                    <button id="cart-toggle" aria-label="Open Cart">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span id="cart-badge" class="badge">0</span>
-                    </button>
-                </div>
-                <div class="mobile-toggle">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-            </div>
-        </div>
-    </header>
+<section class="today" id="today"><div class="wrap">
+<h2>Today at Chautari</h2>
+<div class="note" id="note" hidden></div>
+<div class="tcards" id="tcards"></div>
+</div></section>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-overlay"></div>
-            <div class="container hero-content reveal">
-                <div class="hero-eyebrow">
-                    <span class="live-dot-pulse"></span>
-                    <span>Bharatpur, Chitwan • Authentic Chai & Cuisine</span>
-                </div>
-                <div class="trust-badge">
-                    <div class="stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <span>4.5/5 (33 Google Reviews)</span>
-                </div>
-                <h1>Taste the Soul of <span class="highlight">Nepal</span></h1>
-                <p>Authentic flavors, warm Himalayan hospitality, and the finest artisanal tea in the heart of Bharatpur.</p>
-                <div class="hero-buttons">
-                    <a href="#menu" class="btn btn-primary"><i class="fas fa-utensils"></i> Explore Menu</a>
-                    <a href="#reservation" class="btn btn-outline-white"><i class="far fa-calendar-alt"></i> Book a Table</a>
-                </div>
-            </div>
-        </section>
+<section class="story" id="story"><div class="wrap">
+<img class="cut" src="images/IMG_0792.jpg" alt="Two glasses of chai beside the chalkboard menu" loading="lazy">
+<div>
+<h2>A resting place, the way a chautari should be</h2>
+<p>In Nepal, a chautari is the resting place under a banyan tree, where travellers stop and neighbours talk. We built that idea into a tea house.</p>
+<p>Come for a glass of masala chai at the brick-wall counter, or take a bench in the courtyard under the white canopy and fairy lights. Order a plate of momos, stay for another round.</p>
+<ul class="facts"><li>Open every day, 7 AM to 9 PM</li><li>Scan the QR code on the menu for Wi-Fi</li><li>Dine in, or send your order on WhatsApp</li></ul>
+</div></div></section>
 
-        <section id="about" class="about section-padding">
-            <div class="container about-container">
-                <div class="about-text reveal">
-                    <span class="section-eyebrow"><i class="fas fa-leaf"></i> Our Heritage</span>
-                    <h2>Where Tradition Meets <span class="highlight">Sanctuary</span></h2>
-                    <p>Located on NGO Road in Bharatpur, Chitwan, <strong>Chautari Tea House</strong> is more than just a place to eat; it's a sanctuary where tradition meets taste. 'Chautari' refers to a resting place under a banyan tree, a timeless symbol of community in Nepalese culture.</p>
-                    
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <h3>5+</h3>
-                            <p>Years of Tradition</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>10k+</h3>
-                            <p>Happy Guests</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>15+</h3>
-                            <p>Tea Varieties</p>
-                        </div>
-                    </div>
+<section class="menu" id="menu"><div class="wrap">
+<h2>The menu</h2>
+<p>Prices are in Nepali rupees. Tap + to build an order and send it to us on WhatsApp.</p>
+<div class="tabs" id="tabs" role="tablist"></div>
+<div class="note" id="hknote" hidden></div>
+<div class="list" id="list"></div>
+</div></section>
 
-                    <div class="features">
-                        <div class="feature-item">
-                            <span class="icon"><i class="fas fa-leaf"></i></span>
-                            <span>Fresh Ingredients</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="icon"><i class="fas fa-mug-hot"></i></span>
-                            <span>Authentic Chai</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="icon"><i class="fas fa-sparkles"></i></span>
-                            <span>Cozy Ambiance</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image reveal">
-                    <div class="image-wrapper">
-                        <img src="images/IMG_0792.jpg" alt="Chautari Tea House Interior">
-                        <div class="experience-badge">
-                            <div class="circle-text">Authentic • Nepalese • Taste •</div>
-                            <div class="center-icon"><i class="fas fa-utensils"></i></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section class="gallery" id="gallery"><div class="wrap">
+<h2>Inside Chautari</h2>
+<p>Brick, bamboo lamps and soft light, from first chai to last call.</p>
+<div class="gal">
+<button class="g"><img src="images/IMG_1400.jpg" alt="Guests at wooden tables on the fairy-lit patio at night" loading="lazy"></button>
+<button class="g"><img src="images/IMG_0793.jpg" alt="Sunlit patio seen through the arched wall opening" loading="lazy"></button>
+<button class="g"><img src="images/IMG_1399.jpg" alt="Lounge corner with brick wall, wicker lamps and a Persian rug" loading="lazy"></button>
+<button class="g"><img src="images/IMG_0792.jpg" alt="Two glasses of chai beside the chalkboard menu" loading="lazy"></button>
+</div></div></section>
 
-        <section id="menu" class="menu section-padding bg-light">
-            <div class="container">
-                <div class="section-header reveal">
-                    <span class="section-eyebrow"><i class="fas fa-mug-hot"></i> Artisanal Menu</span>
-                    <h2>Signature <span class="highlight">Delights</span></h2>
-                    <p>Carefully curated local favorites and premium brews. Search or filter to discover your craving.</p>
-                </div>
 
-                <div class="menu-search-wrapper reveal">
-                    <div class="search-bar">
-                        <i class="fas fa-search"></i>
-                        <input type="text" id="menu-search" placeholder="Search for momo, tea, fries...">
-                    </div>
-                </div>
-                
-                <div class="menu-filters reveal">
-                    <button class="filter-btn active" data-filter="milk-tea"><i class="fas fa-mug-hot"></i> Milk Tea</button>
-                    <button class="filter-btn" data-filter="black-tea"><i class="fas fa-leaf"></i> Black Tea</button>
-                    <button class="filter-btn" data-filter="hot-brews"><i class="fas fa-coffee"></i> Hot Brews</button>
-                    <button class="filter-btn" data-filter="cold-cups"><i class="fas fa-glass-martini-alt"></i> Cold Cups</button>
-                    <button class="filter-btn" data-filter="quick-bites"><i class="fas fa-cookie"></i> Quick Bites</button>
-                    <button class="filter-btn" data-filter="heavy-hitters"><i class="fas fa-drumstick-bite"></i> Heavy Hitters</button>
-                    <button class="filter-btn" data-filter="hukka"><i class="fas fa-smoking"></i> Hukka</button>
-                </div>
+<section class="visit" id="visit"><div class="wrap">
+<div>
+<h2>Visit us</h2>
+<div class="info">
+<div><b>Address</b>NGO Road, Bharatpur 44200, Chitwan, Nepal</div>
+<div><b>Hours</b>Every day, 7 AM to 9 PM</div>
+<div><b>Contact</b><a href="tel:+9779821878239">+977 9821878239</a><br><a href="mailto:chautaritea@gmail.com">chautaritea@gmail.com</a></div>
+<div><b>Rated 4.5 out of 5</b>by 33 guests on Google</div>
+</div>
+<div class="cta"><a class="btn" target="_blank" rel="noopener" href="https://maps.google.com/?q=Chautari+Tea+House,+NGO+Road,+Bharatpur,+Chitwan,+Nepal">Get directions</a><a class="btn ghost" target="_blank" rel="noopener" href="https://wa.me/9779821878239">Chat on WhatsApp</a></div>
+</div>
+<div class="map"><iframe title="Map to Chautari Tea House" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Chautari+Tea+House,+NGO+Road,+Bharatpur,+Chitwan,+Nepal&output=embed"></iframe></div>
+</div></section>
+</main>
 
-                <div class="menu-grid">
-                    <!-- MILK TEA -->
-                    <div class="menu-card reveal" data-category="milk-tea">
-                        <div class="card-image"><div class="placeholder-img gradient-1"><i class="fas fa-mug-hot placeholder-icon"></i></div><div class="price-tag">Rs. 40</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Plain Milk Tea</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>Classic, comforting milk tea brewed to perfection.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="milk-tea">
-                        <div class="card-image"><div class="placeholder-img gradient-1"><i class="fas fa-mug-hot placeholder-icon"></i></div><div class="price-tag">Rs. 45</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Ginger Milk Tea</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>Fresh ginger infused in traditional milk tea for a warming kick.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="milk-tea">
-                        <div class="card-image"><div class="placeholder-img gradient-1"><i class="fas fa-mug-hot placeholder-icon"></i></div><div class="price-tag">Rs. 50</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Masala Milk Tea</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>Our signature blend of premium black tea, milk, and hand-ground spices.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="milk-tea">
-                        <div class="card-image"><div class="placeholder-img gradient-1"><i class="fas fa-mug-hot placeholder-icon"></i></div><div class="price-tag">Rs. 70</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Matka Tea</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>Earthy, traditional tea served in a clay pot for an authentic taste.</p>
-                        </div>
-                    </div>
+<footer><div class="wrap">
+<div><b style="color:#fff;letter-spacing:.2em;text-transform:uppercase">Chautari Tea House</b><br>Where every cup tells a story.</div>
+<div><a href="https://www.facebook.com/chautariteahouse" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/chautariteahouse/" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@chautariteahouse" target="_blank" rel="noopener">TikTok</a></div>
+<div>&copy; 2026 Chautari Tea House</div>
+</div></footer>
 
-                    <!-- BLACK TEA -->
-                    <div class="menu-card reveal" data-category="black-tea">
-                        <div class="card-image"><div class="placeholder-img gradient-2"><i class="fas fa-leaf placeholder-icon"></i></div><div class="price-tag">Rs. 30</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Plain Black Tea</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>Simple and refreshing traditional black tea.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="black-tea">
-                        <div class="card-image"><div class="placeholder-img gradient-2"><i class="fas fa-leaf placeholder-icon"></i></div><div class="price-tag">Rs. 35</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Ginger Black Tea</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>Black tea perfectly balanced with fresh crushed ginger.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="black-tea">
-                        <div class="card-image"><div class="placeholder-img gradient-2"><i class="fas fa-lemon placeholder-icon"></i></div><div class="price-tag">Rs. 40</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Lemon Black Tea</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>Zesty black tea with a fresh squeeze of lemon.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="black-tea">
-                        <div class="card-image"><div class="placeholder-img gradient-2"><i class="fas fa-leaf placeholder-icon"></i></div><div class="price-tag">Rs. 40</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Masala Black Tea</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>Aromatic black tea infused with our special spice mix.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="black-tea">
-                        <div class="card-image"><div class="placeholder-img gradient-2"><i class="fas fa-lemon placeholder-icon"></i></div><div class="price-tag">Rs. 45</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Ginger Lemon Black Tea</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>The perfect blend of soothing ginger and citrusy lemon.</p>
-                        </div>
-                    </div>
+<div class="bar" id="bar"><span id="bt"></span><button class="btn sm" id="bo">Review order</button></div>
+<dialog id="sheet"><h3 style="margin-bottom:.5rem">Your order</h3><div id="lines"></div><div style="display:grid;gap:.8rem;margin-top:1rem">
+<div class="mode"><label><input type="radio" name="mode" value="Dine-in" checked> Dine-in</label><label><input type="radio" name="mode" value="Pickup"> Pickup</label></div>
+<label>Your name<input id="on" autocomplete="name"></label>
+<label><span id="tl">Table number (optional)</span><input id="tn"></label>
+<label>Note (optional)<input id="nt" placeholder="Less sugar, no onion"></label>
+</div>
+<div class="tot"><span>Total</span><span id="sum"></span></div>
+<button class="btn" id="send" style="width:100%">Send order on WhatsApp</button><button class="btn ghost" id="cl" style="width:100%;margin-top:.6rem">Keep browsing</button></dialog>
+<dialog id="lb"><img alt=""></dialog>
 
-                    <!-- HOT BREWS -->
-                    <div class="menu-card reveal" data-category="hot-brews">
-                        <div class="card-image"><div class="placeholder-img gradient-3"><i class="fas fa-coffee placeholder-icon"></i></div><div class="price-tag">Rs. 60</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Green Tea</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>Light, healthy, and rich in antioxidants.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="hot-brews">
-                        <div class="card-image"><div class="placeholder-img gradient-3"><i class="fas fa-spa placeholder-icon"></i></div><div class="price-tag">Rs. 80</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Chamomile Tea</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>Soothing floral notes for ultimate relaxation.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="hot-brews">
-                        <div class="card-image"><div class="placeholder-img gradient-3"><i class="fas fa-leaf placeholder-icon"></i></div><div class="price-tag">Rs. 80</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Peach Tea (Hot)</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>Warm and fruity tea infused with delicate peach flavors.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="hot-brews">
-                        <div class="card-image"><div class="placeholder-img gradient-3"><i class="fas fa-spa placeholder-icon"></i></div><div class="price-tag">Rs. 80</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Jasmine Tea</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>Delicate green tea scented with fragrant jasmine blossoms.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="hot-brews">
-                        <div class="card-image"><div class="placeholder-img gradient-3"><i class="fas fa-fan placeholder-icon"></i></div><div class="price-tag">Rs. 80</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Hibiscus Tea</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>Tart and vibrant herbal tea made from hibiscus flowers.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="hot-brews">
-                        <div class="card-image"><div class="placeholder-img gradient-3"><i class="fas fa-lemon placeholder-icon"></i></div><div class="price-tag">Rs. 60</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Hot Lemon</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>Fresh, zesty, and warming classic hot lemon water.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="hot-brews">
-                        <div class="card-image"><div class="placeholder-img gradient-3"><i class="fas fa-mug-hot placeholder-icon"></i></div><div class="price-tag">Rs. 120</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Hot Lemon With Honey</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>A comforting classic to soothe the soul and throat.</p>
-                        </div>
-                    </div>
-
-                    <!-- COLD CUPS -->
-                    <div class="menu-card reveal" data-category="cold-cups">
-                        <div class="card-image"><div class="placeholder-img gradient-4"><i class="fas fa-glass-martini-alt placeholder-icon"></i></div><div class="price-tag">Rs. 70</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Lemonade</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>Classic, sweet, and perfectly tart chilled refreshment.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="cold-cups">
-                        <div class="card-image"><div class="placeholder-img gradient-4"><i class="fas fa-glass-whiskey placeholder-icon"></i></div><div class="price-tag">Rs. 90</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Cold Lemon</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>Icy citrus cooler to beat the summer heat.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="cold-cups">
-                        <div class="card-image"><div class="placeholder-img gradient-4"><i class="fas fa-glass-whiskey placeholder-icon"></i></div><div class="price-tag">Rs. 100</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Plain Lassi</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>Traditional, creamy, and refreshing yogurt-based drink.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="cold-cups">
-                        <div class="card-image"><div class="placeholder-img gradient-4"><i class="fas fa-glass-whiskey placeholder-icon"></i></div><div class="price-tag">Rs. 150</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Iced Peach Tea</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>Refreshing iced tea infused with natural peach flavors.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="menu-card reveal" data-category="cold-cups">
-                        <div class="card-image"><div class="placeholder-img gradient-4"><i class="fas fa-coffee placeholder-icon"></i></div><div class="price-tag">Rs. 150</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Iced Coffee</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>Chilled, bold coffee over ice for the ultimate pick-me-up.</p>
-                        </div>
-                    </div>
-
-                    <!-- QUICK BITES -->
-                    <div class="menu-card reveal" data-category="quick-bites">
-                        <div class="card-image"><div class="placeholder-img gradient-1"><i class="fas fa-cookie placeholder-icon"></i></div><div class="price-tag">Rs. 100</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Cookies</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>Freshly baked cookies, the perfect companion for your tea.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="quick-bites">
-                        <div class="card-image"><div class="placeholder-img gradient-1"><i class="fas fa-leaf placeholder-icon"></i></div><div class="price-tag">Rs. 100</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Veg Pakoda</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>Crispy, deep-fried fritters made with mixed vegetables and gram flour.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="quick-bites">
-                        <div class="card-image"><div class="placeholder-img gradient-1"><i class="fas fa-fire placeholder-icon"></i></div><div class="price-tag">Rs. 110</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Noodle Sadeko</h3><span class="diet-tag spicy">Spicy</span></div>
-                            <p>Spicy and tangy tossed dry noodles with fresh herbs and spices.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="menu-card reveal" data-category="quick-bites">
-                        <div class="card-image"><div class="placeholder-img gradient-1"><i class="fas fa-pepper-hot placeholder-icon"></i></div><div class="price-tag">Rs. 150</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>PeriPeri Fries</h3><span class="diet-tag spicy">Spicy</span></div>
-                            <p>Crispy fries tossed in our fiery Peri Peri seasoning.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="quick-bites">
-                        <div class="card-image"><div class="placeholder-img gradient-1"><i class="fas fa-fire-alt placeholder-icon"></i></div><div class="price-tag">Rs. 150</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Spicy Spiral Fries</h3><span class="diet-tag spicy">Spicy</span></div>
-                            <p>Fun, curly spiral fries with a spicy kick.</p>
-                        </div>
-                    </div>
-
-                    <!-- HEAVY HITTERS -->
-                    <div class="menu-card reveal" data-category="heavy-hitters">
-                        <div class="card-image"><div class="placeholder-img gradient-2"><i class="fas fa-circle placeholder-icon"></i></div><div class="price-tag">Rs. 120</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Aalu Chop</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>Flavorful, spiced mashed potato patties, fried to golden perfection.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="heavy-hitters">
-                        <div class="card-image"><div class="placeholder-img gradient-2"><i class="fas fa-seedling placeholder-icon"></i></div><div class="price-tag">Rs. 130</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Peanuts Sadeko</h3><span class="diet-tag veg">Veg</span></div>
-                            <p>Roasted peanuts mixed with onions, tomatoes, green chilies, and tangy spices.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="heavy-hitters">
-                        <div class="card-image"><div class="placeholder-img gradient-2"><i class="fas fa-dumpling placeholder-icon"></i></div><div class="price-tag">Rs. 130</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Buff Momo</h3><span class="diet-tag non-veg">Non-Veg</span></div>
-                            <p>Steamed dumplings filled with juicy minced buffalo meat, served with achar.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="heavy-hitters">
-                        <div class="card-image"><div class="placeholder-img gradient-2"><i class="fas fa-drumstick-bite placeholder-icon"></i></div><div class="price-tag">Rs. 140</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Chicken Momo</h3><span class="diet-tag non-veg">Non-Veg</span></div>
-                            <p>Hand-wrapped steamed chicken dumplings served with our vibrant tomato achar.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="heavy-hitters">
-                        <div class="card-image"><div class="placeholder-img gradient-2"><i class="fas fa-bacon placeholder-icon"></i></div><div class="price-tag">Rs. 200</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Fried Sausages</h3><span class="diet-tag non-veg">Non-Veg</span></div>
-                            <p>Crispy fried sausages served hot with our signature dipping sauces.</p>
-                        </div>
-                    </div>
-
-                    <!-- HUKKA AND SMOKE -->
-                    <div class="menu-card reveal" data-category="hukka">
-                        <div class="card-image"><div class="placeholder-img gradient-3"><i class="fas fa-smoking placeholder-icon"></i></div><div class="price-tag">Rs. 25</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Shikar Ice</h3></div>
-                            <p>Classic menthol cigarette option.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="hukka">
-                        <div class="card-image"><div class="placeholder-img gradient-3"><i class="fas fa-smoking placeholder-icon"></i></div><div class="price-tag">Rs. 30</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Surya</h3></div>
-                            <p>Premium local cigarette option.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="hukka">
-                        <div class="card-image"><div class="placeholder-img gradient-3"><i class="fas fa-fire placeholder-icon"></i></div><div class="price-tag">Rs. 50</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Additional Coal Normal</h3></div>
-                            <p>Extra standard coal for your hukka session.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="hukka">
-                        <div class="card-image"><div class="placeholder-img gradient-3"><i class="fas fa-fire-alt placeholder-icon"></i></div><div class="price-tag">Rs. 80</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Additional Coal Kaloud</h3></div>
-                            <p>Extra premium Kaloud coal for a smoother burn.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="hukka">
-                        <div class="card-image"><div class="placeholder-img gradient-3"><i class="fas fa-smoking placeholder-icon"></i></div><div class="price-tag">Rs. 350</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Normal Hukka</h3></div>
-                            <p>Traditional hookah setup with your choice of standard flavors.</p>
-                        </div>
-                    </div>
-                    <div class="menu-card reveal" data-category="hukka">
-                        <div class="card-image"><div class="placeholder-img gradient-3"><i class="fas fa-smoking placeholder-icon"></i></div><div class="price-tag">Rs. 499</div></div>
-                        <div class="card-content">
-                            <div class="card-header"><h3>Kaloud Hukka</h3></div>
-                            <p>Premium hookah experience with quality flavors and Kaloud setup.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center reveal" style="margin-top: 3rem;">
-                    <a href="images/menue.JPG" download class="btn btn-secondary"><i class="fas fa-download"></i> Download Full Menu Image</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Gallery Section -->
-        <section id="gallery" class="gallery section-padding">
-            <div class="container">
-                <div class="section-header reveal">
-                    <span class="section-eyebrow"><i class="fas fa-camera"></i> Atmosphere</span>
-                    <h2>Visual <span class="highlight">Sanctuary</span></h2>
-                    <p>A glimpse into the serene ambiance, craftsmanship, and culinary art of Chautari.</p>
-                </div>
-                <div class="gallery-grid reveal">
-                    <div class="gallery-item"><img src="images/IMG_1399.jpg" alt="Cozy Interior"></div>
-                    <div class="gallery-item"><img src="images/IMG_0792.jpg" alt="Chalkboard Menu"></div>
-                    <div class="gallery-item"><img src="images/IMG_0793.jpg" alt="Ambiance"></div>
-                    <div class="gallery-item"><img src="images/IMG_1400.jpg" alt="Food"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Reviews/Testimonials Section -->
-        <section id="reviews" class="reviews section-padding bg-light">
-            <div class="container">
-                <div class="section-header reveal">
-                    <span class="section-eyebrow"><i class="fab fa-google"></i> Verified Google Reviews</span>
-                    <h2>What Our Guests <span class="highlight">Say</span></h2>
-                    <p>Real experiences from our community. Rated 4.5/5 on Google with authentic stories.</p>
-                </div>
-                
-                <div class="reviews-carousel reveal">
-                    <div class="review-card">
-                        <div class="review-header">
-                            <div class="reviewer-avatar">S</div>
-                            <div class="reviewer-info">
-                                <h4>Sujan Shrestha</h4>
-                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            </div>
-                            <i class="fab fa-google google-icon"></i>
-                        </div>
-                        <p class="review-text">"Best Masala Chai in Bharatpur! The ambiance is so peaceful and perfect for evening hangouts. Highly recommend their momos too."</p>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-header">
-                            <div class="reviewer-avatar" style="background: var(--clr-secondary);">A</div>
-                            <div class="reviewer-info">
-                                <h4>Aarati Thapa</h4>
-                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                            </div>
-                            <i class="fab fa-google google-icon"></i>
-                        </div>
-                        <p class="review-text">"Very authentic taste and reasonable prices. The staff is extremely polite. Finding parking can sometimes be tricky on NGO road, but it's worth it."</p>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-header">
-                            <div class="reviewer-avatar" style="background: #e74c3c;">R</div>
-                            <div class="reviewer-info">
-                                <h4>Ramesh Gurung</h4>
-                                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            </div>
-                            <i class="fab fa-google google-icon"></i>
-                        </div>
-                        <p class="review-text">"A hidden gem in Chitwan. The Newari Khaja set is phenomenal. It truly feels like a traditional chautari. Will definitely return."</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Reservation Section -->
-        <section id="reservation" class="reservation section-padding">
-            <div class="container reservation-container reveal">
-                <div class="reservation-info">
-                    <span class="section-eyebrow eyebrow-light"><i class="far fa-calendar-check"></i> Bookings</span>
-                    <h2>Reserve a <span class="highlight">Table</span></h2>
-                    <p>Secure your spot at Chautari Tea House. Whether it's a romantic evening, family gathering, or a casual tea break, we have the ideal setting for you.</p>
-                    <ul class="reservation-perks">
-                        <li><i class="fas fa-check-circle"></i> Zero booking fees</li>
-                        <li><i class="fas fa-check-circle"></i> Instant SMS / WhatsApp confirmation</li>
-                        <li><i class="fas fa-check-circle"></i> Special dietary requests welcomed</li>
-                    </ul>
-                </div>
-                <div class="reservation-form-wrapper">
-                    <form id="booking-form" class="reservation-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" required placeholder="John Doe">
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" required placeholder="+977 98XXXXXXXX">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="date">Date</label>
-                                <input type="date" id="date" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="time">Time</label>
-                                <input type="time" id="time" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="guests">Guests</label>
-                                <select id="guests" required>
-                                    <option value="1">1 Guest</option>
-                                    <option value="2" selected>2 Guests</option>
-                                    <option value="3">3 Guests</option>
-                                    <option value="4">4 Guests</option>
-                                    <option value="5+">5+ Guests</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Special Requests (Optional)</label>
-                            <textarea id="message" rows="3" placeholder="Anniversary, Window seat, etc."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-calendar-check"></i> Confirm Reservation</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <!-- Location Section -->
-        <section id="visit" class="location section-padding bg-light">
-            <div class="container">
-                <div class="location-wrapper reveal">
-                    <div class="location-info">
-                        <span class="section-eyebrow"><i class="fas fa-map-marked-alt"></i> Find Us</span>
-                        <h2>Visit Our <span class="highlight">Chautari</span></h2>
-                        <div class="live-status-pill">
-                            <span class="live-dot-pulse green"></span>
-                            <span>Open Daily: 7:00 AM – 9:00 PM</span>
-                        </div>
-                        <p>We are conveniently located on NGO Road in Bharatpur. Drop by for a soothing cup of tea or a hearty traditional meal.</p>
-                        
-                        <div class="info-card">
-                            <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
-                            <div>
-                                <h4>Address</h4>
-                                <p>NGO Rd, Bharatpur 44200, Chitwan, Nepal</p>
-                            </div>
-                        </div>
-
-                        <div class="info-card">
-                            <div class="icon-box"><i class="fas fa-clock"></i></div>
-                            <div>
-                                <h4>Operating Hours</h4>
-                                <p>Every Day: 7:00 AM - 9:00 PM</p>
-                            </div>
-                        </div>
-
-                        <div class="info-card">
-                            <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
-                            <div>
-                                <h4>Direct Line</h4>
-                                <p><a href="tel:+9779821878239" style="color: inherit;">+977 9821878239</a><br><a href="mailto:chautaritea@gmail.com" style="color: inherit;">chautaritea@gmail.com</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="location-map">
-                        <div class="map-placeholder">
-                            <div class="map-inner">
-                                <i class="fas fa-map-marked-alt" style="font-size: 3rem; color: var(--clr-primary); margin-bottom: 1rem;"></i>
-                                <h3>Interactive Map</h3>
-                                <p>NGO Road, Bharatpur, Nepal</p>
-                                <a href="https://maps.google.com/?q=Chautari+Tea+House,+NGO+Road,+Bharatpur,+Chitwan,+Nepal" target="_blank" class="btn btn-outline"><i class="fas fa-directions"></i> Open in Google Maps</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" class="faq section-padding">
-            <div class="container">
-                <div class="section-header reveal">
-                    <span class="section-eyebrow"><i class="fas fa-question-circle"></i> Answers</span>
-                    <h2>Frequently Asked <span class="highlight">Questions</span></h2>
-                    <p>Everything you need to know about our tea house, reservations, and takeout.</p>
-                </div>
-                <div class="faq-container reveal">
-                    <div class="faq-item">
-                        <button class="faq-question">Do you offer home delivery? <i class="fas fa-chevron-down"></i></button>
-                        <div class="faq-answer">
-                            <p>Currently, we focus on providing the best dine-in and takeaway experiences. You can pre-order via WhatsApp for quick pickup!</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question">Is parking available? <i class="fas fa-chevron-down"></i></button>
-                        <div class="faq-answer">
-                            <p>Yes, street parking is available along NGO Road. We recommend arriving a bit early during peak evening hours.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question">Do you have vegan options? <i class="fas fa-chevron-down"></i></button>
-                        <div class="faq-answer">
-                            <p>Absolutely! We have several vegan-friendly items including our black teas, fries, and certain quick bites. Just ask our staff for recommendations.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question">Can I book the venue for a private event? <i class="fas fa-chevron-down"></i></button>
-                        <div class="faq-answer">
-                            <p>Yes, we accept bookings for small parties and gatherings. Please contact us directly via phone or WhatsApp to discuss arrangements.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Cart Sidebar -->
-    <div class="cart-overlay" id="cart-overlay"></div>
-    <div class="cart-sidebar" id="cart-sidebar">
-        <div class="cart-header">
-            <h3>Your Order</h3>
-            <button id="close-cart"><i class="fas fa-times"></i></button>
-        </div>
-        <div class="cart-items" id="cart-items">
-            <!-- Items injected here by JS -->
-            <div class="empty-cart-msg">Your cart is empty. Add some delicious items!</div>
-        </div>
-        <div class="cart-footer">
-            <div class="cart-total">
-                <span>Total:</span>
-                <span id="cart-total-price">Rs. 0</span>
-            </div>
-            <button id="checkout-btn" class="btn btn-primary btn-block"><i class="fab fa-whatsapp"></i> Order via WhatsApp</button>
-        </div>
-    </div>
-
-    <!-- Scroll to Top Button -->
-    <button id="scroll-top" class="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
-
-    <!-- Cookie Consent Banner -->
-    <div id="cookie-banner" class="cookie-banner">
-        <div class="cookie-content">
-            <i class="fas fa-cookie-bite"></i>
-            <p>We use cookies to improve your experience and remember your preferences. Do you accept?</p>
-        </div>
-        <div class="cookie-buttons">
-            <button id="reject-cookies" class="btn btn-outline" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Reject</button>
-            <button id="accept-cookies" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Accept</button>
-        </div>
-    </div>
-
-    <footer>
-        <div class="container footer-container">
-            <div class="footer-brand">
-                <h3>Chautari<span>Tea House</span></h3>
-                <p>Bringing people together over a cup of tea. Authentic Nepalese flavors in the heart of Chitwan.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#reservation">Book Table</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                </ul>
-            </div>
-            <div class="footer-social-wrapper">
-                <h4>Connect With Us</h4>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/chautariteahouse" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/chautariteahouse/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@chautariteahouse" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Chautari Tea House. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Lightbox for Gallery -->
-    <div id="lightbox" class="lightbox">
-        <span class="lightbox-close">&times;</span>
-        <img src="" alt="Full Screen Image" id="lightbox-img">
-    </div>
-
-    <script src="script.js"></script>
+<script>
+const $=s=>document.querySelector(s),WA='9779821878239',R=n=>'Rs. '+(Number.isInteger(n)?n:n.toFixed(2));
+const M={"Milk tea":[["Plain tea",40],["Ginger tea",45],["Masala tea",50],["Matka tea",70]],"Black tea":[["Plain tea",30],["Ginger tea",35],["Lemon tea",40],["Masala tea",40],["Ginger lemon tea",45]],"Hot brews":[["Green tea",60],["Chamomile tea",80],["Peach tea",80],["Jasmine tea",80],["Hibiscus tea",80],["Hot lemon with honey",120]],"Cold cups":[["Lemonade",70],["Cold lemon",90],["Plain lassi",100],["Iced peach tea",150],["Virgin mojito",150],["Iced coffee",150]],"Quick bites":[["Cookies",100],["Veg pakoda",100],["Noodle sadeko",110],["Cheese fries",150],["PeriPeri fries",150],["Spicy spiral fries",150]],"Heavy hitters":[["Aalu chop",120],["Peanuts sadeko",130],["Buff momo",130],["Chicken momo",140],["Fried sausages",200]],"Hukka and smoke":[["Shikar Ice",25],["Surya",30],["Additional coal normal",50],["Additional coal Kaloud",80],["Normal hukka",350],["Kaloud hukka",499]]};
+// Hookah offer every Friday and Saturday (Nepal time): Normal Rs. 175, Kaloud Rs. 250
+const FRI=['Fri','Sat'].includes(new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Kathmandu',weekday:'short'}).format(new Date())),HK=['Normal hukka','Kaloud hukka'];
+const px=(c,n,p)=>FRI&&c==='Hukka and smoke'&&HK.includes(n)?{'Normal hukka':175,'Kaloud hukka':250}[n]:p;
+const sl=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+// open status (Nepal time)
+(()=>{const h=+new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Kathmandu',hour:'numeric',hour12:false}).format(new Date())%24,on=h>=7&&h<21,s=$('#status');
+s.classList.toggle('on',on);s.lastElementChild.textContent=on?'Open now until 9 PM':'Closed now, opens at 7 AM'})();
+// nav
+$('#burger').onclick=e=>{const o=$('#links').classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',o)};
+document.querySelectorAll('#links a').forEach(a=>a.onclick=()=>$('#links').classList.remove('open'));
+// menu
+const C={};
+function show(cat){
+  document.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected',t.dataset.c===cat));
+  const a=document.querySelector('.tab[aria-selected=true]'),T=$('#tabs');if(a)T.scrollTo({left:a.offsetLeft-(T.clientWidth-a.offsetWidth)/2,behavior:'smooth'});
+  const L=$('#list');L.innerHTML='';
+  $('#hknote').hidden=!(FRI&&cat==='Hukka and smoke');$('#hknote').textContent='Hookah offer on now: Normal Rs. 175, Kaloud Rs. 250. Prices below are already the offer prices.';
+  M[cat].forEach(([n,p0])=>{const p=px(cat,n,p0),hk=p!==p0;
+    const r=document.createElement('div');r.className='row'+(hk?' hot':'');
+    r.innerHTML=`<b>${n}</b><span>${hk?`<s>${R(p0)}</s>`:''}${R(p)}</span><button class="add" aria-label="Add ${n} to order">+</button>`;
+    r.querySelector('.add').onclick=()=>add(cat,n,p);
+    const im=new Image();im.alt=n;im.loading='lazy';im.onload=()=>r.prepend(im);im.src=`images/menu/${sl(cat)}-${sl(n)}.jpg`;
+    L.append(r);
+  });
+}
+Object.keys(M).forEach((c,i)=>{const b=document.createElement('button');b.className='tab';b.role='tab';b.dataset.c=c;b.textContent=c;b.onclick=()=>{show(c);const r=$('#list').getBoundingClientRect();if(r.top<0||r.top>innerHeight*.6)$('#list').scrollIntoView({behavior:'smooth'})};$('#tabs').append(b)});
+show('Milk tea');
+// order
+const label=(c,n)=>/^(Milk|Black) tea$/.test(c)?`${c}: ${n}`:n+(FRI&&c==='Hukka and smoke'&&HK.includes(n)?' (Fri/Sat offer)':'');
+function add(c,n,p){const k=c+'|'+n;(C[k]=C[k]||{l:label(c,n),p,q:0}).q++;draw()}
+function draw(){
+  const v=Object.values(C).filter(x=>x.q>0),q=v.reduce((a,x)=>a+x.q,0),s=v.reduce((a,x)=>a+x.q*x.p,0);
+  $('#bar').classList.toggle('show',q>0);$('#bt').textContent=`${q} item${q>1?'s':''}, ${R(s)}`;$('#sum').textContent=R(s);
+  $('#lines').innerHTML='';
+  Object.entries(C).filter(([,x])=>x.q>0).forEach(([k,x])=>{
+    const d=document.createElement('div');d.className='ln';
+    d.innerHTML=`<b>${x.l}</b><button class="q" aria-label="Remove one">-</button><span>${x.q}</span><button class="q" aria-label="Add one">+</button>`;
+    const [m,a]=d.querySelectorAll('.q');m.onclick=()=>{x.q--;draw()};a.onclick=()=>{x.q++;draw()};
+    $('#lines').append(d);
+  });
+  if(!q&&$('#sheet').open)$('#sheet').close();
+}
+$('#bo').onclick=()=>$('#sheet').showModal();$('#cl').onclick=()=>$('#sheet').close();
+document.querySelectorAll('[name=mode]').forEach(r=>r.onchange=()=>{$('#tl').textContent=r.value==='Pickup'?'Pickup time (optional)':'Table number (optional)';$('#tn').placeholder=r.value==='Pickup'?'e.g. 6:30 PM':''});
+$('#send').onclick=()=>{
+  const v=Object.values(C).filter(x=>x.q>0),mode=document.querySelector('[name=mode]:checked').value,nm=$('#on').value.trim(),tn=$('#tn').value.trim(),nt=$('#nt').value.trim();
+  const t="Hello Chautari Tea House! I'd like to order ("+mode+"):\n\n"+v.map(x=>`${x.q}x ${x.l} - ${R(x.q*x.p)}`).join('\n')+`\n\nTotal: ${R(v.reduce((a,x)=>a+x.q*x.p,0))}`+(nm?`\nName: ${nm}`:'')+(tn?`\n${mode==='Pickup'?'Pickup time':'Table'}: ${tn}`:'')+(nt?`\nNote: ${nt}`:'');
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(t)}`,'_blank');
+};
+// Edit this list to change "Today at Chautari". Each item is [category, name] from the menu. Set NOTICE for a banner, e.g. "Live music this Friday, 6 PM".
+const NOTICE='';
+const TODAY=[
+ ...(FRI?[{t:'Hookah offer is on today',d:'Normal hookah Rs. 175, Kaloud hookah Rs. 250.',i:[['Hukka and smoke','Normal hukka'],['Hukka and smoke','Kaloud hukka']]}]:[]),
+ {t:'Fresh chai, all day',d:'Plain or masala, served hot in a glass.',i:[['Milk tea','Plain tea'],['Milk tea','Masala tea']]},
+ {t:'Momos to share',d:'Steamed momos, buff or chicken.',i:[['Heavy hitters','Buff momo'],['Heavy hitters','Chicken momo']]},
+ {t:'Something cold',d:'For a warm afternoon in the courtyard.',i:[['Cold cups','Lemonade'],['Cold cups','Virgin mojito']]}
+];
+if(NOTICE){$('#note').hidden=false;$('#note').textContent=NOTICE}
+if(!TODAY.length&&!NOTICE)$('#today').hidden=true;
+TODAY.forEach(x=>{
+  const d=document.createElement('div');d.className='tc';d.innerHTML=`<h3>${x.t}</h3><p>${x.d}</p>`;
+  x.i.forEach(([c,n])=>{const p=px(c,n,M[c].find(m=>m[0]===n)[1]),b=document.createElement('button');b.className='btn sm';b.textContent=`Add ${n.toLowerCase()}, ${R(p)}`;b.onclick=()=>add(c,n,p);d.append(b)});
+  $('#tcards').append(d);
+});
+$('#deal').addEventListener('click',()=>show('Hukka and smoke'));
+if(FRI)document.body.classList.add('offer-day');
+// lightbox + dialog backdrop close
+document.querySelectorAll('.g').forEach(b=>b.onclick=()=>{$('#lb img').src=b.firstElementChild.src;$('#lb img').alt=b.firstElementChild.alt;$('#lb').showModal()});
+$('#lb').onclick=()=>$('#lb').close();$('#sheet').onclick=e=>{if(e.target===$('#sheet'))$('#sheet').close()};
+</script>
 </body>
 </html>
