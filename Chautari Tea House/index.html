@@ -18,8 +18,8 @@
 <body id="top">
 <header class="nav"><div class="wrap">
 <a class="brand" href="#top"><img src="images/logo.JPG" alt="Chautari Tea House logo" width="46" height="46"><span>Chautari</span></a>
-<nav id="links"><a href="#menu">Menu</a><a href="#story">Our story</a><a href="#gallery">Gallery</a><a href="#visit">Visit</a><a class="btn sm" href="#menu">Order now</a></nav>
-<a class="btn sm navmenu" href="#menu">Menu</a>
+<nav id="links"><a href="menu.html">Full menu</a><a href="#story">Our story</a><a href="#gallery">Gallery</a><a href="#visit">Visit</a><a class="btn sm" href="#menu">Order now</a></nav>
+<a class="btn sm navmenu" href="menu.html">Menu</a>
 <button id="burger" aria-label="Open navigation" aria-expanded="false"><i></i><i></i><i></i></button>
 </div></header>
 
@@ -31,7 +31,7 @@
 <p class="lead">Masala chai, momos and crisp fries in a canopy-lit courtyard on NGO Road, Bharatpur.</p>
 <div class="cta"><a class="btn" href="#menu">See the menu</a><a class="btn ghost" href="#today">Today at Chautari</a></div>
 </div>
-<div class="tagwrap"><div class="tag"><img src="images/IMG_1399.jpg" alt="Lounge corner with brick wall, wicker lamps and a Persian rug" fetchpriority="high"></div><a class="deal" href="#menu" id="deal"><span class="dk" id="dk">Hookah offer, every Friday and Saturday</span><div class="dp"><div><small>Normal hookah</small><s>Rs. 350</s><b>Rs. 175</b></div><div><small>Kaloud hookah</small><s>Rs. 499</s><b>Rs. 250</b></div></div></a></div>
+<div class="tagwrap"><div class="tag"><img src="images/IMG_1399.jpg" alt="Lounge corner with brick wall, wicker lamps and a Persian rug" fetchpriority="high"></div><a class="deal" href="#menu" id="deal"><i class="off" aria-hidden="true">Half<br>price</i><span class="dk" id="dk">Hookah offer, every Friday and Saturday</span><div class="dp"><div><small>Normal hookah</small><s>Rs. 350</s><b>Rs. 175</b></div><div><small>Kaloud hookah</small><s>Rs. 499</s><b>Rs. 250</b></div></div></a></div>
 </div></section>
 
 <section class="today" id="today"><div class="wrap">
@@ -52,6 +52,7 @@
 <section class="menu" id="menu"><div class="wrap">
 <h2>The menu</h2>
 <p>Prices are in Nepali rupees. Tap + to build an order and send it to us on WhatsApp.</p>
+<div class="cta" style="margin-top:1.2rem"><a class="btn ghost sm" href="menu.html">Open the photo menu</a></div>
 <div class="tabs" id="tabs" role="tablist"></div>
 <div class="note" id="hknote" hidden></div>
 <div class="list" id="list"></div>
@@ -85,7 +86,7 @@
 
 <footer><div class="wrap">
 <div><b style="color:#fff;letter-spacing:.2em;text-transform:uppercase">Chautari Tea House</b><br>Where every cup tells a story.</div>
-<div><a href="https://www.facebook.com/chautariteahouse" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/chautariteahouse/" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@chautariteahouse" target="_blank" rel="noopener">TikTok</a></div>
+<div><a href="menu.html">Menu</a><a href="https://www.facebook.com/chautariteahouse" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/chautariteahouse/" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@chautariteahouse" target="_blank" rel="noopener">TikTok</a></div>
 <div>&copy; 2026 Chautari Tea House</div>
 </div></footer>
 
@@ -168,6 +169,7 @@ TODAY.forEach(x=>{
   $('#tcards').append(d);
 });
 $('#deal').addEventListener('click',()=>show('Hukka and smoke'));
+if(!FRI){$('#dk').textContent='Back this Friday and Saturday';$('#deal').classList.add('idle')}
 if(FRI)document.body.classList.add('offer-day');
 // lightbox + dialog backdrop close
 document.querySelectorAll('.g').forEach(b=>b.onclick=()=>{$('#lb img').src=b.firstElementChild.src;$('#lb img').alt=b.firstElementChild.alt;$('#lb').showModal()});
