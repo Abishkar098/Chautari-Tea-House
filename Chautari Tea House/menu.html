@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Menu | Chautari Tea House</title>
+<meta name="description" content="Tea, momos, fries and hookah at Chautari Tea House, NGO Road, Bharatpur. Prices in Nepali rupees.">
+<meta name="theme-color" content="#1B2619">
+<meta property="og:title" content="Menu | Chautari Tea House">
+<meta property="og:description" content="Where every cup tells a story. See the full menu.">
+<meta property="og:image" content="https://www.chautariteahouse.com.np/images/IMG_1399.jpg">
+<link rel="icon" href="images/logo.JPG">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--leaf:#A3B88C;--deep:#56733F;--butter:#EFDDA9;--mist:#F2F6EC;--night:#1B2619;--ink:#26302A}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
+body{font:400 1.0625rem/1.5 Jost,system-ui,sans-serif;color:var(--ink);background:var(--mist);padding-bottom:env(safe-area-inset-bottom)}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--deep);outline-offset:3px}
+.wrap{width:min(92%,760px);margin:auto}
+
+/* header */
+.top{background:var(--night);color:#dfe8d6;padding:calc(1.6rem + env(safe-area-inset-top)) 0 4.5rem;text-align:center;position:relative}
+.top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:34px;background:var(--mist);clip-path:polygon(0 100%,100% 100%,100% 0,92% 70%,84% 0,76% 70%,68% 0,60% 70%,52% 0,44% 70%,36% 0,28% 70%,20% 0,12% 70%,4% 0,0 70%)}
+.top img{width:84px;height:84px;border-radius:50%;margin:0 auto .9rem;border:3px solid var(--butter)}
+.top h1{font-size:clamp(2rem,8vw,3rem);line-height:1.05;font-weight:700;color:#fff;letter-spacing:-.01em}
+.top p{color:var(--butter);margin-top:.5rem;font-weight:500}
+.status{display:inline-flex;gap:.5rem;align-items:center;margin-top:1rem;font-size:.92rem;background:rgba(255,255,255,.08);border-radius:99px;padding:.3rem .9rem}
+.status i{width:9px;height:9px;border-radius:50%;background:#b5b5b5}.status.on i{background:#6fcf7f}
+
+/* offer tag */
+.offer{display:none;position:relative;margin:-3rem auto 1.6rem;width:min(92%,420px);padding:1.5rem 1.3rem 1.2rem;background:var(--butter);color:#000;text-align:center;text-decoration:none;
+ clip-path:polygon(0 0,calc(100% - 28px) 0,100% 28px,100% 100%,0 100%)}
+.offer.show{display:block}
+.offer .k{display:flex;justify-content:center;align-items:center;gap:.55rem;font-weight:700}
+.offer .k::before{content:"";width:9px;height:9px;border-radius:50%;background:#d93a2b;animation:live 1.6s ease-in-out infinite}
+.offer .pr{display:flex;justify-content:center;gap:2rem;margin-top:.6rem}
+.offer .pr div{display:grid;line-height:1.1}
+.offer small{font-size:.85rem}
+.offer s{opacity:.55}
+.offer b{font-size:2.3rem;font-weight:700}
+@keyframes live{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(1.5)}}
+body.noOffer .top{padding-bottom:3.2rem}
+
+/* category chips */
+.chips{position:sticky;top:0;z-index:20;background:var(--mist);box-shadow:0 1px 0 #d3dcc6;padding-top:env(safe-area-inset-top)}
+.chips .in{display:flex;gap:.55rem;overflow-x:auto;padding:.75rem 4%;scrollbar-width:none}
+.chips .in::-webkit-scrollbar{display:none}
+.chip{flex:none;min-height:44px;display:inline-flex;align-items:center;padding:0 1.1rem;border-radius:99px;border:2px solid #000;color:#000;font-weight:600;font-size:.95rem;text-decoration:none;background:transparent}
+.chip[aria-current=true]{background:#000;color:#fff}
+
+/* sections */
+section{padding:1.8rem 0 .4rem}
+.tagh{display:inline-block;background:#000;color:#fff;font-weight:700;font-size:1.15rem;padding:.35rem 1.4rem .35rem 1.1rem;margin-bottom:.4rem;
+ clip-path:polygon(0 0,calc(100% - 16px) 0,100% 50%,calc(100% - 16px) 100%,0 100%)}
+.item{display:flex;align-items:baseline;gap:.6rem;padding:.7rem 0}
+.item b{font-weight:500;color:#000}
+.item .dots{flex:1;border-bottom:2px dotted #b9c7a8;transform:translateY(-4px);min-width:1rem}
+.item .p{font-weight:600;color:var(--deep);white-space:nowrap}
+.item .p s{opacity:.5;font-weight:400;margin-right:.4rem}
+.item.hot{background:var(--butter);border-radius:12px;padding:.7rem .9rem;margin:.2rem 0}
+.item.hot .p{color:#000}
+.cols{display:grid;gap:0 3rem}
+@media(min-width:640px){.cols.two{grid-template-columns:1fr 1fr}}
+
+/* footer area */
+.cta{display:grid;gap:.7rem;margin:2.2rem auto 1.2rem}
+.btn{display:flex;align-items:center;justify-content:center;min-height:50px;border-radius:99px;font-weight:600;text-decoration:none;border:2px solid #000;background:#000;color:#fff}
+.btn.ghost{background:transparent;color:#000}
+.wifi{background:#fff;border-left:4px solid var(--leaf);padding:.8rem 1rem;border-radius:0 12px 12px 0;font-weight:500;color:#000}
+.foot{text-align:center;padding:1.6rem 0 2.4rem;font-size:.92rem}
+.foot a{margin:0 .6rem;color:var(--deep);font-weight:600}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<img src="images/logo.JPG" alt="Chautari Tea House logo" width="84" height="84">
+<h1>Chautari Tea House</h1>
+<p>Where every cup tells a story.</p>
+<div class="status" id="status"><i></i><span>Open daily 7 AM to 9 PM</span></div>
+</div></header>
+
+<a class="offer" id="offer" href="#hukka-and-smoke">
+<span class="k">Hookah offer on now</span>
+<div class="pr"><div><small>Normal hookah</small><s>Rs. 350</s><b>Rs. 175</b></div><div><small>Kaloud hookah</small><s>Rs. 499</s><b>Rs. 250</b></div></div>
+</a>
+
+<nav class="chips" aria-label="Menu categories"><div class="in" id="chips"></div></nav>
+
+<main class="wrap" id="menu"></main>
+
+<div class="wrap">
+<div class="wifi">Wi-Fi: ask us at the counter, or scan the QR code on your table menu.</div>
+<div class="cta">
+<a class="btn" href="index.html#menu">Order from your table</a>
+<a class="btn ghost" href="https://wa.me/9779821878239" target="_blank" rel="noopener">Chat on WhatsApp</a>
+</div>
+<div class="foot">Prices are in Nepali rupees.<br><br>
+<a href="index.html">Website</a><a href="https://www.instagram.com/chautariteahouse/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/chautariteahouse" target="_blank" rel="noopener">Facebook</a></div>
+</div>
+
+<script>
+const $=s=>document.querySelector(s);
+const R=n=>'Rs. '+n;
+const sl=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+// Edit prices here. Each group is [title, columns, items].
+const M=[
+ ["Milk tea",1,[["Plain tea",40],["Ginger tea",45],["Masala tea",50],["Matka tea",70]]],
+ ["Black tea",1,[["Plain tea",30],["Ginger tea",35],["Lemon tea",40],["Masala tea",40],["Ginger lemon tea",45]]],
+ ["Hot brews",1,[["Green tea",60],["Chamomile tea",80],["Peach tea",80],["Jasmine tea",80],["Hibiscus tea",80],["Hot lemon with honey",120]]],
+ ["Cold cups",1,[["Lemonade",70],["Cold lemon",90],["Plain lassi",100],["Iced peach tea",150],["Virgin mojito",150],["Iced coffee",150]]],
+ ["Quick bites",1,[["Cookies",100],["Veg pakoda",100],["Noodle sadeko",110],["Cheese fries",150],["PeriPeri fries",150],["Spicy spiral fries",150]]],
+ ["Heavy hitters",1,[["Aalu chop",120],["Peanuts sadeko",130],["Buff momo",130],["Chicken momo",140],["Fried sausages",200]]],
+ ["Hukka and smoke",1,[["Shikar Ice",25],["Surya",30],["Additional coal normal",50],["Additional coal Kaloud",80],["Normal hukka",350],["Kaloud hukka",499]]]
+];
+// Hookah offer every Friday and Saturday (Nepal time)
+const FRI=['Fri','Sat'].includes(new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Kathmandu',weekday:'short'}).format(new Date()));
+const OFFER={'Normal hukka':175,'Kaloud hukka':250};
+$('#offer').classList.toggle('show',FRI);document.body.classList.toggle('noOffer',!FRI);
+
+const h=+new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Kathmandu',hour:'numeric',hour12:false}).format(new Date())%24,on=h>=7&&h<21;
+$('#status').classList.toggle('on',on);$('#status').lastElementChild.textContent=on?'Open now until 9 PM':'Closed now, opens at 7 AM';
+
+M.forEach(([t,,items])=>{
+ const id=sl(t),s=document.createElement('section');s.id=id;
+ s.innerHTML=`<h2 class="tagh">${t}</h2>`+items.map(([n,p])=>{
+  const o=FRI&&OFFER[n];
+  return `<div class="item${o?' hot':''}"><b>${n}</b><span class="dots"></span><span class="p">${o?`<s>${R(p)}</s>${R(o)}`:R(p)}</span></div>`}).join('');
+ $('#menu').append(s);
+ const a=document.createElement('a');a.className='chip';a.href='#'+id;a.textContent=t;$('#chips').append(a);
+});
+
+// highlight the chip for the section in view
+const chips=[...document.querySelectorAll('.chip')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){chips.forEach(c=>c.removeAttribute('aria-current'));const c=chips.find(c=>c.hash==='#'+e.target.id);c.setAttribute('aria-current','true');
+ const bar=$('#chips');bar.scrollTo({left:c.offsetLeft-(bar.clientWidth-c.offsetWidth)/2,behavior:'smooth'})}}),{rootMargin:'-30% 0px -60% 0px'});
+document.querySelectorAll('main section').forEach(s=>io.observe(s));
+</script>
+</body>
+</html>
