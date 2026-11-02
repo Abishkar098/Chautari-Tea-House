@@ -4,52 +4,70 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Menu | Chautari Tea House</title>
-<meta name="description" content="Masala chai, momos, fries and more at Chautari Tea House, NGO Road, Bharatpur. Tap + to order.">
+<meta name="description" content="Tea, coffee, momos, fries and more at Chautari Tea House, NGO Road, Bharatpur.">
 <meta name="theme-color" content="#1B2619">
-<meta property="og:title" content="Menu | Chautari Tea House">
-<meta property="og:description" content="Where every cup tells a story. See the menu and order from your table.">
-<meta property="og:image" content="https://www.chautariteahouse.com.np/images/IMG_1399.jpg">
 <link rel="icon" href="images/logo.JPG">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--leaf:#A3B88C;--deep:#56733F;--butter:#EFDDA9;--mist:#F2F6EC;--night:#1B2619;--ink:#26302A}
+:root{--h:64px;--hs:46px;--leaf:#A3B88C;--deep:#56733F;--butter:#EFDDA9;--mist:#F2F6EC;--night:#1B2619;--ink:#26302A}
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
-body{font:400 1.0625rem/1.45 Jost,system-ui,sans-serif;color:var(--ink);background:var(--mist);padding-bottom:calc(6rem + env(safe-area-inset-bottom))}
+html{-webkit-text-size-adjust:100%}
+body{font:400 1.0625rem/1.45 Jost,system-ui,sans-serif;color:var(--ink);background:var(--mist);padding-bottom:calc(2rem + env(safe-area-inset-bottom))}
 img{display:block;max-width:100%}
-button{font-family:inherit}
+a{color:inherit}
 :focus-visible{outline:3px solid var(--deep);outline-offset:3px}
 .wrap{width:min(92%,960px);margin:auto}
+[hidden]{display:none!important}
 
-.top{background:var(--night);color:#dfe8d6;padding:calc(1.4rem + env(safe-area-inset-top)) 0 3.2rem;text-align:center;position:relative}
-.top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:30px;background:var(--mist);clip-path:polygon(0 100%,100% 100%,100% 0,92% 70%,84% 0,76% 70%,68% 0,60% 70%,52% 0,44% 70%,36% 0,28% 70%,20% 0,12% 70%,4% 0,0 70%)}
-.top img{width:76px;height:76px;border-radius:50%;margin:0 auto .8rem;border:3px solid var(--butter)}
-.top h1{font-size:clamp(1.9rem,7vw,2.8rem);line-height:1.05;font-weight:700;color:#fff}
-.top p{color:var(--butter);margin-top:.4rem;font-weight:500}
-.status{display:inline-flex;gap:.5rem;align-items:center;margin-top:.9rem;font-size:.92rem;background:rgba(255,255,255,.08);border-radius:99px;padding:.3rem .9rem}
-.status i{width:9px;height:9px;border-radius:50%;background:#b5b5b5}.status.on i{background:#6fcf7f}
+.top{position:fixed;inset:0 0 auto;z-index:50;height:calc(var(--h) + env(safe-area-inset-top));padding-top:env(safe-area-inset-top);background:var(--night);color:#dfe8d6;box-shadow:0 1px 0 rgba(255,255,255,.08);transition:height .25s}
+.top.sm{height:calc(var(--hs) + env(safe-area-inset-top))}
+body{padding-top:calc(var(--h) + env(safe-area-inset-top))}
+.top .wrap{height:100%;display:flex;align-items:center;gap:.7rem}
+.top img{width:44px;height:44px;border-radius:50%;border:2px solid var(--butter);flex:none;transition:width .25s,height .25s}
+.top.sm img{width:32px;height:32px}
+.ttl{flex:1;min-width:0;line-height:1.2}
+.top h1{font-size:1.2rem;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.top .tag{color:var(--butter);font-size:.85rem;font-weight:500;max-height:1.3rem;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;transition:max-height .2s,opacity .2s}
+.top.sm .tag{max-height:0;opacity:0}
+.status{display:inline-flex;gap:.45rem;align-items:center;flex:none;font-size:.8rem;color:#dfe8d6;background:rgba(255,255,255,.08);border-radius:99px;padding:.3rem .75rem}
+.status i{width:8px;height:8px;border-radius:50%;background:#b5b5b5;flex:none}.status.on i{background:#6fcf7f}
+@media(max-width:480px){.top h1{font-size:1.05rem}.top .tag{font-size:.76rem}.status{padding:.3rem .6rem}.status span{font-size:0}.status span::after{content:attr(data-s);font-size:.78rem}}
 
-.offer{display:none;position:relative;margin:-1.2rem auto 1rem;width:min(92%,430px);padding:1.2rem 1.3rem 1.1rem;background:var(--butter);color:#000;text-align:center;text-decoration:none;clip-path:polygon(0 0,calc(100% - 26px) 0,100% 26px,100% 100%,0 100%);z-index:2}
+.offer{display:none;position:relative;margin:1rem auto 0;width:min(92%,430px);padding:1.1rem 1.3rem;background:var(--butter);color:#000;text-align:center;text-decoration:none;clip-path:polygon(0 0,calc(100% - 26px) 0,100% 26px,100% 100%,0 100%);z-index:2}
 .offer.show{display:block}
-.offer .k{display:flex;justify-content:center;align-items:center;gap:.55rem;font-weight:700}
-.offer .k::before{content:"";width:9px;height:9px;border-radius:50%;background:#d93a2b;animation:live 1.6s ease-in-out infinite}
-.offer .pr{display:flex;justify-content:center;gap:2rem;margin-top:.5rem}
-.offer .pr div{display:grid;line-height:1.1}.offer small{font-size:.85rem}.offer s{opacity:.55}.offer b{font-size:2.2rem;font-weight:700}
-@keyframes live{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(1.5)}}
+.offer .k{font-weight:700}
+.offer .pr{display:flex;justify-content:center;gap:2rem;margin-top:.4rem}
+.offer .pr div{display:grid;line-height:1.1}.offer small{font-size:.85rem}.offer s{opacity:.55}.offer b{font-size:2rem}
 
-.chips{position:sticky;top:0;z-index:20;background:var(--mist);box-shadow:0 1px 0 #d3dcc6;padding-top:env(safe-area-inset-top)}
-.chips .in{display:flex;gap:.55rem;overflow-x:auto;padding:.75rem 4%;scrollbar-width:none}
-.chips .in::-webkit-scrollbar{display:none}
-.chip{flex:none;min-height:44px;display:inline-flex;align-items:center;gap:.4rem;padding:0 1.05rem;border-radius:99px;border:2px solid #000;color:#000;font-weight:600;font-size:.95rem;text-decoration:none}
-.chip[aria-current=true]{background:#000;color:#fff}
+.lead{font-size:1.25rem;font-weight:700;color:#000;margin:1.4rem 0 .9rem}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+@media(min-width:700px){.tiles{grid-template-columns:repeat(3,1fr);gap:1.1rem}}
+.tile{position:relative;display:block;aspect-ratio:4/5;border-radius:20px;overflow:hidden;text-decoration:none;background:var(--deep);color:#fff;isolation:isolate}
+.tile .ic{position:absolute;inset:0;display:grid;place-items:center;font-size:4rem;z-index:-3;opacity:.5}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.tile::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(10,16,10,.94) 0,rgba(10,16,10,.82) 22%,rgba(10,16,10,.45) 42%,rgba(10,16,10,0) 65%)}
+.tile span{position:absolute;left:1rem;right:1rem;bottom:.9rem;display:grid;line-height:1.15;text-shadow:0 1px 3px rgba(0,0,0,.7)}
+.tile b{font-size:1.3rem;font-weight:700}.tile small{color:var(--butter);font-size:.88rem;font-weight:500;margin-top:.15rem}
+.tile:active{transform:scale(.98)}
 
-section{padding:1.6rem 0 .2rem}
-.tagh{display:inline-block;background:#000;color:#fff;font-weight:700;font-size:1.2rem;padding:.35rem 1.5rem .35rem 1.1rem;margin-bottom:.8rem;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 50%,calc(100% - 16px) 100%,0 100%)}
-.hint{background:#000;color:var(--butter);font-weight:500;font-size:.95rem;padding:.6rem 1rem;border-radius:12px;margin-bottom:.8rem}
+.back{display:flex;width:fit-content;align-items:center;min-height:44px;font-weight:600;font-size:1.1rem;color:#000;text-decoration:none}
+.back:active{color:var(--deep)}
+.back.top2{margin:.1rem 0 .6rem}.back.end{margin:1.4rem 0 .2rem}
+.pills{position:sticky;top:calc(var(--hs) + env(safe-area-inset-top));z-index:20;background:var(--mist);box-shadow:0 1px 0 #d3dcc6}
+.pills .in{display:flex;gap:.55rem;overflow-x:auto;padding:.7rem 4%;scrollbar-width:none}
+.pills .in::-webkit-scrollbar{display:none}
+.pill{flex:none;min-height:44px;display:inline-flex;align-items:center;gap:.4rem;padding:0 1.05rem;border-radius:99px;border:2px solid #000;color:#000;font-weight:600;font-size:.95rem;text-decoration:none}
+.pill[aria-current=true]{background:#000;color:#fff}
+#body{padding-top:.5rem}
+#body.in{animation:fin .25s ease}
+@keyframes fin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+.tagh{display:block;width:fit-content;background:#000;color:#fff;font-weight:700;font-size:1.2rem;padding:.35rem 1.5rem .35rem 1.1rem;margin:0 0 .7rem;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 50%,calc(100% - 16px) 100%,0 100%)}
+.grid+.tagh{margin-top:1.4rem}
+.hint{background:#000;color:var(--butter);font-weight:500;font-size:.95rem;padding:.6rem 1rem;border-radius:12px}
 .grid{display:grid;gap:.8rem}
 @media(min-width:700px){.grid{grid-template-columns:1fr 1fr;gap:1rem}}
-
 .card{display:grid;grid-template-columns:92px 1fr;gap:.9rem;align-items:center;background:#fff;border-radius:16px;padding:.7rem;border:1px solid #dfe7d4}
 .card.hot{background:var(--butter);border-color:var(--butter)}
 .ph{width:92px;height:92px;border-radius:12px;overflow:hidden;background:var(--leaf);display:grid;place-items:center;font-size:2.4rem}
@@ -58,158 +76,137 @@ section{padding:1.6rem 0 .2rem}
 .nm{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;font-weight:600;color:#000;font-size:1.08rem;line-height:1.2}
 .pick{font-size:.72rem;font-weight:700;background:#000;color:var(--butter);padding:.1rem .55rem;border-radius:99px;white-space:nowrap}
 .ds{font-size:.92rem;line-height:1.35;color:#4a5750}
-.card.hot .ds{color:#26302A}
-.bt{display:flex;align-items:center;justify-content:space-between;margin-top:.3rem}
-.pc{font-weight:700;color:var(--deep);font-size:1.05rem}
-.card.hot .pc{color:#000}
+.pc{font-weight:700;color:var(--deep);font-size:1.1rem;margin-top:.2rem}
+.card.hot .pc{color:#000}.card.hot .ds{color:var(--ink)}
 .pc s{opacity:.5;font-weight:400;margin-right:.4rem}
-.add{min-width:44px;height:44px;padding:0 1rem;border-radius:99px;border:2px solid #000;background:#000;color:#fff;font:600 1rem Jost,sans-serif;cursor:pointer}
-.add:active{background:var(--leaf);color:#000;border-color:var(--leaf)}
-.add.on{background:var(--leaf);color:#000;border-color:var(--leaf)}
-
-.bar{position:fixed;left:50%;bottom:calc(1rem + env(safe-area-inset-bottom));transform:translate(-50%,220%);width:min(92%,520px);background:#000;color:#fff;border-radius:99px;padding:.45rem .5rem .45rem 1.4rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;z-index:40;transition:transform .35s;font-weight:600}
-.bar.show{transform:translate(-50%,0)}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 1.4rem;border-radius:99px;font:600 1rem Jost,sans-serif;text-decoration:none;border:2px solid #000;background:#000;color:#fff;cursor:pointer}
-.btn.ghost{background:transparent;color:#000}
-.bar .btn{background:var(--butter);border-color:var(--butter);color:#000}
-
-dialog{border:0;border-radius:20px;padding:1.4rem;width:min(92%,460px);max-height:88vh;color:var(--ink)}
-dialog::backdrop{background:rgba(0,0,0,.55)}
-dialog h3{margin-bottom:.4rem;color:#000}
-.ln{display:flex;align-items:center;gap:.6rem;padding:.55rem 0;border-bottom:1px solid #e3e9db}.ln b{flex:1;font-weight:500}
-.q{width:38px;height:38px;border-radius:50%;border:2px solid #000;background:#fff;font:600 1.1rem Jost,sans-serif;cursor:pointer}
-.up{display:none;margin-top:.9rem;background:var(--butter);border-radius:12px;padding:.7rem .9rem;font-weight:500;color:#000}
-.up.show{display:flex;align-items:center;justify-content:space-between;gap:.6rem}
-.up button{border:2px solid #000;background:#000;color:#fff;border-radius:99px;min-height:40px;padding:0 1rem;font:600 .95rem Jost,sans-serif;cursor:pointer;flex:none}
-.mode{display:flex;gap:.6rem;margin-top:1rem}
-.mode label{flex:1;display:flex;align-items:center;justify-content:center;gap:.5rem;border:2px solid #000;border-radius:99px;min-height:44px;cursor:pointer;font-weight:500}
-.mode input{width:auto;min-height:0}
-.mode label:has(input:checked){background:#000;color:#fff}
-.fld{display:grid;gap:.3rem;font-weight:500;color:#000;font-size:.95rem;margin-top:.8rem}
-.fld input{font:inherit;min-height:46px;padding:.5rem .8rem;border:1.5px solid #c9d5bb;border-radius:12px;width:100%}
-.tot{display:flex;justify-content:space-between;font-weight:700;color:#000;margin:1rem 0}
 
 .info{margin:2rem auto 0}
 .wifi{background:#fff;border-left:4px solid var(--leaf);padding:.8rem 1rem;border-radius:0 12px 12px 0;font-weight:500;color:#000}
 .foot{text-align:center;padding:1.4rem 0 1rem;font-size:.92rem}
-.foot a{margin:0 .6rem;color:var(--deep);font-weight:600}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.foot a{display:inline-block;margin:.2rem .6rem;color:var(--deep);font-weight:600}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
-<header class="top"><div class="wrap">
-<img src="images/logo.JPG" alt="Chautari Tea House logo" width="76" height="76">
-<h1>Chautari Tea House</h1>
-<p>Where every cup tells a story.</p>
+<header class="top" id="top"><div class="wrap">
+<img src="images/logo.JPG" alt="Chautari Tea House logo" width="44" height="44">
+<div class="ttl"><h1>Chautari Tea House</h1><p class="tag">Where every cup tells a story.</p></div>
 <div class="status" id="status"><i></i><span>Open daily 7 AM to 9 PM</span></div>
 </div></header>
 
-<a class="offer" id="offer" href="#hukka-and-smoke">
+<a class="offer" id="offer" href="#hookah">
 <span class="k">Hookah offer on now</span>
 <div class="pr"><div><small>Normal hookah</small><s>Rs. 350</s><b>Rs. 175</b></div><div><small>Kaloud hookah</small><s>Rs. 499</s><b>Rs. 250</b></div></div>
 </a>
 
-<nav class="chips" aria-label="Menu categories"><div class="in" id="chips"></div></nav>
-<main class="wrap" id="menu"></main>
+<main class="wrap" id="home">
+<h2 class="lead">What are you in the mood for?</h2>
+<div class="tiles" id="tiles"></div>
+</main>
+
+<div id="cat" hidden>
+<nav class="pills" aria-label="Menu categories"><div class="in" id="pills"></div></nav>
+<main class="wrap" id="body"></main>
+</div>
 
 <div class="wrap info">
 <div class="wifi">Wi-Fi: ask us at the counter, or scan the QR code on the printed menu.</div>
-<div class="foot">Prices are in Nepali rupees. Tap + to order, then send it to us on WhatsApp.<br><br>
-<a href="index.html">Website</a><a href="https://www.instagram.com/chautariteahouse/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/chautariteahouse" target="_blank" rel="noopener">Facebook</a></div>
+<div class="foot">Prices are in Nepali rupees.<br><br>
+<a href="index.html">Website</a><a href="https://www.instagram.com/chautariteahouse/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/chautariteahouse" target="_blank" rel="noopener">Facebook</a><a href="https://www.tiktok.com/@chautariteahouse" target="_blank" rel="noopener">TikTok</a></div>
 </div>
 
-<div class="bar" id="bar"><span id="bt"></span><button class="btn" id="bo">Review order</button></div>
-<dialog id="sheet">
-<h3>Your order</h3><div id="lines"></div>
-<div class="up" id="up"><span id="ut"></span><button id="ub">Add</button></div>
-<div class="mode"><label><input type="radio" name="mode" value="Dine-in" checked> Dine-in</label><label><input type="radio" name="mode" value="Pickup"> Pickup</label></div>
-<label class="fld">Your name<input id="on" autocomplete="name"></label>
-<label class="fld"><span id="tl">Table number</span><input id="tn" inputmode="numeric"></label>
-<label class="fld">Note (optional)<input id="nt" placeholder="Less sugar, no onion"></label>
-<div class="tot"><span>Total</span><span id="sum"></span></div>
-<button class="btn" id="send" style="width:100%">Send order on WhatsApp</button>
-<button class="btn ghost" id="cl" style="width:100%;margin-top:.6rem">Keep browsing</button>
-</dialog>
-
 <script>
-const $=s=>document.querySelector(s),WA='9779821878239',R=n=>'Rs. '+n;
+const $=s=>document.querySelector(s),R=n=>'Rs. '+n;
 const sl=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 
 /* ---- EDIT HERE ----
-   Each item: [name, price, short description]. Add the word "pick" as a 4th value to show an "Our pick" tag.
-   Photos: save a square JPG as images/menu/<category>-<name>.jpg (see menu-photo-names.txt). Until then a coloured icon shows. */
-const M=[
- ["Milk tea","🍵",[["Plain tea",40,"Classic hot milk tea, strong and comforting."],["Ginger tea",45,"Milk tea with a warm ginger bite."],["Masala tea",50,"Spiced chai with a fragrant kick.","pick"],["Matka tea",70,"Chai served in a clay pot for an earthy taste.","pick"]]],
- ["Black tea","🫖",[["Plain tea",30,"Light and clean, no milk."],["Ginger tea",35,"Black tea with a ginger bite."],["Lemon tea",40,"Black tea with a squeeze of lemon."],["Masala tea",40,"Spiced black tea, no milk."],["Ginger lemon tea",45,"Ginger and lemon, soothing on a cool evening."]]],
- ["Coffee","☕",[["Black coffee",70,"Strong, simple and no milk."],["Milk coffee",90,"Smooth, creamy hot coffee."],["Iced black coffee",120,"Bold black coffee over ice."],["Iced coffee",150,"Cold, smooth coffee over ice."]]],
- ["Hot brews","🌿",[["Green tea",60,"Light, fresh and gentle."],["Chamomile tea",80,"A calming floral cup."],["Peach tea",80,"Sweet, fruity and smooth."],["Jasmine tea",80,"Fragrant and floral."],["Hibiscus tea",80,"Tangy, ruby-red herbal cup."],["Hot lemon with honey",120,"Warm, sweet and soothing."]]],
- ["Cold cups","🧊",[["Lemonade",70,"Fresh, tangy and ice cold."],["Cold lemon",100,"A sharp, refreshing lemon cooler."],["Plain lassi",100,"Thick, creamy and cooling."],["Iced peach tea",150,"Chilled tea with a peachy sweetness.","pick"],["Virgin mojito",150,"Mint, lime and fizz, no alcohol."]]],
- ["Quick bites","🍟",[["Cookies",100,"A sweet crunch to go with your tea."],["Veg pakoda",100,"Crispy fried vegetable fritters."],["Noodle sadeko",110,"Spicy Nepali-style noodle salad."],["Cheese fries",150,"Crisp fries under melted cheese."],["PeriPeri fries",150,"Fries tossed in peri-peri spice.","pick"],["Spicy spiral fries",150,"Curly fries with a spicy kick."]]],
- ["Heavy hitters","🥟",[["Aalu chop",120,"Spiced potato fritter, a Nepali favourite."],["Peanuts sadeko",130,"Crunchy peanuts with onion, chilli and lime."],["Buff momo",140,"Steamed dumplings with buff filling.","pick"],["Chicken momo",140,"Steamed dumplings with chicken filling.","pick"],["Fried sausages",200,"Golden fried sausages, great to share."]]],
- ["Hukka and smoke","💨",[["Shikar Ice",25,""],["Surya",30,""],["Additional coal normal",50,""],["Additional coal Kaloud",80,""],["Normal hukka",350,""],["Kaloud hukka",499,""]]]
+   Tab = [id, title, subtitle, emoji, [ [section name, [ [item, price, description, "pick"?], ... ]], ... ]]
+   Tab photo:  images/menu/tab-<id>.jpg (or .svg)    (portrait or square works best)
+   Item photo: images/menu/<section>-<item>.jpg  e.g. images/menu/milk-tea-masala-tea.jpg
+   Until a photo exists, an emoji shows instead. */
+const T=[
+["tea","Tea","Milk, black and herbal","🍵",[
+ ["Milk tea",[["Plain tea",40,"Classic hot milk tea, strong and comforting."],["Ginger tea",45,"Milk tea with a warm ginger bite."],["Masala tea",50,"Spiced chai with a fragrant kick.","pick"],["Matka tea",70,"Chai served in a clay pot for an earthy taste.","pick"]]],
+ ["Black tea",[["Plain tea",30,"Light and clean, no milk."],["Ginger tea",35,"Black tea with a ginger bite."],["Lemon tea",40,"Black tea with a squeeze of lemon."],["Masala tea",40,"Spiced black tea, no milk."],["Ginger lemon tea",45,"Ginger and lemon, soothing on a cool evening."]]]]],
+["brews","Hot brews","Herbal and fruity cups","🌿",[
+ ["Hot brews",[["Green tea",60,"Light, fresh and gentle."],["Chamomile tea",80,"A calming floral cup."],["Peach tea",80,"Sweet, fruity and smooth."],["Jasmine tea",80,"Fragrant and floral."],["Hibiscus tea",80,"Tangy, ruby-red herbal cup."],["Hot lemon with honey",120,"Warm, sweet and soothing."]]]]],
+["coffee","Coffee","Hot and cold","☕",[
+ ["Hot coffee",[["Black coffee",70,"Strong, simple and no milk."],["Milk coffee",90,"Smooth, creamy hot coffee."]]],
+ ["Cold coffee",[["Iced black coffee",120,"Bold black coffee over ice."],["Iced coffee",150,"Cold, smooth coffee over ice."]]]]],
+["cold","Cold drinks","Cool and refreshing","🧊",[
+ ["Cold cups",[["Lemonade",70,"Fresh, tangy and ice cold."],["Cold lemon",100,"A sharp, refreshing lemon cooler."],["Plain lassi",100,"Thick, creamy and cooling."],["Iced black coffee",120,"Bold black coffee over ice."],["Iced coffee",150,"Cold, smooth coffee over ice."],["Iced peach tea",150,"Chilled tea with a peachy sweetness.","pick"]]]]],
+["snacks","Snacks","Light bites and momos","🥟",[
+ ["Light snacks",[["Cookies",100,"A sweet crunch to go with your tea."],["Veg pakoda",100,"Crispy fried vegetable fritters."],["Noodle sadeko",110,"Spicy Nepali-style noodle salad."],["PeriPeri fries",150,"Fries tossed in peri-peri spice.","pick"],["Spicy spiral fries",150,"Curly fries with a spicy kick."]]],
+ ["Heavy hitters",[["Aalu chop",120,"Spiced potato fritter, a Nepali favourite."],["Peanuts sadeko",130,"Crunchy peanuts with onion, chilli and lime."],["Buff momo",140,"Steamed dumplings with buff filling.","pick"],["Chicken momo",140,"Steamed dumplings with chicken filling.","pick"],["Fried sausages",200,"Golden fried sausages, great to share."]]]]],
+["hookah","Hookah","Hukka and smoke","💨",[
+ ["Hukka and smoke",[["Shikar Ice",25,""],["Surya",30,""],["Additional coal normal",50,""],["Additional coal Kaloud",80,""],["Normal hukka",350,""],["Kaloud hukka",499,""]]]]]
 ];
-/* Real photo used for every item in a category until its own photo exists */
+/* Photo used for every item in a section until its own photo exists */
 const FALLBACK={"Milk tea":"images/menu/chai.jpg"};
-/* Suggested add-on when an order has no food yet */
-const UPSELL=["Heavy hitters","Buff momo",140];
 /* Hookah offer every Friday and Saturday (Nepal time) */
 const FRI=['Fri','Sat'].includes(new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Kathmandu',weekday:'short'}).format(new Date()));
 const OFFER={'Normal hukka':175,'Kaloud hukka':250};
 
 $('#offer').classList.toggle('show',FRI);
-const h=+new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Kathmandu',hour:'numeric',hour12:false}).format(new Date())%24,on=h>=7&&h<21;
-$('#status').classList.toggle('on',on);$('#status').lastElementChild.textContent=on?'Open now until 9 PM':'Closed now, opens at 7 AM';
-
-const C={};
-const label=(c,n)=>/^(Milk|Black) tea$/.test(c)?`${c}: ${n}`:n+(OFFER[n]&&FRI?' (Fri/Sat offer)':'');
-M.forEach(([cat,ico,items])=>{
- const id=sl(cat),s=document.createElement('section');s.id=id;
- s.innerHTML=`<h2 class="tagh">${cat}</h2>${cat==='Hukka and smoke'?`<div class="hint">${FRI?'Offer on now: 50% off today. Normal Rs. 175, Kaloud Rs. 250.':'50% off every Friday and Saturday: Normal Rs. 175, Kaloud Rs. 250.'}</div>`:''}<div class="grid"></div>`;
- items.forEach(([n,p0,d,pk])=>{
-  const o=FRI&&OFFER[n],p=o||p0,k=cat+'|'+n,c=document.createElement('div');
-  c.className='card'+(o?' hot':'');
-  c.innerHTML=`<div class="ph">${ico}</div><div class="bd"><div class="nm">${n}${pk?'<span class="pick">Our pick</span>':''}</div>${d?`<div class="ds">${d}</div>`:''}<div class="bt"><span class="pc">${o?`<s>${R(p0)}</s>`:''}${R(p)}</span><button class="add" aria-label="Add ${n} to order">+ Add</button></div></div>`;
-  const ab=c.querySelector('.add');ab.onclick=()=>{add(cat,n,p);ab.classList.add('on');setTimeout(()=>ab.classList.remove('on'),500)};
-  const ph=c.querySelector('.ph'),im=new Image();im.alt=n;
-  const put=()=>{ph.textContent='';ph.append(im)};
-  im.onload=put;
-  im.onerror=()=>{im.onerror=null;if(FALLBACK[cat]){im.src=FALLBACK[cat]}};
-  im.src=`images/menu/${sl(cat)}-${sl(n)}.jpg`;
-  s.querySelector('.grid').append(c);
- });
- $('#menu').append(s);
- const a=document.createElement('a');a.className='chip';a.href='#'+id;a.textContent=ico+' '+cat;$('#chips').append(a);
-});
-const chips=[...document.querySelectorAll('.chip')];
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){chips.forEach(c=>c.removeAttribute('aria-current'));const c=chips.find(c=>c.hash==='#'+e.target.id);c.setAttribute('aria-current','true');const b=$('#chips');b.scrollTo({left:c.offsetLeft-(b.clientWidth-c.offsetWidth)/2,behavior:'smooth'})}}),{rootMargin:'-30% 0px -60% 0px'});
-document.querySelectorAll('main section').forEach(s=>io.observe(s));
-
-/* ---- order ---- */
-function add(c,n,p){const k=c+'|'+n;(C[k]=C[k]||{c,l:label(c,n),p,q:0}).q++;draw()}
-function draw(){
-  const v=Object.values(C).filter(x=>x.q>0),q=v.reduce((a,x)=>a+x.q,0),s=v.reduce((a,x)=>a+x.q*x.p,0);
-  $('#bar').classList.toggle('show',q>0);$('#bt').textContent=`${q} item${q>1?'s':''}, ${R(s)}`;$('#sum').textContent=R(s);
-  $('#lines').innerHTML='';
-  v.forEach(x=>{
-    const d=document.createElement('div');d.className='ln';
-    d.innerHTML=`<b>${x.l}</b><button class="q" aria-label="Remove one">-</button><span>${x.q}</span><button class="q" aria-label="Add one">+</button>`;
-    const [m,a]=d.querySelectorAll('.q');m.onclick=()=>{x.q--;draw()};a.onclick=()=>{x.q++;draw()};
-    $('#lines').append(d);
-  });
-  const food=v.some(x=>x.c==='Quick bites'||x.c==='Heavy hitters');
-  $('#up').classList.toggle('show',q>0&&!food);
-  $('#ut').textContent=`Hungry? Add ${UPSELL[1].toLowerCase()}, ${R(UPSELL[2])}`;
-  if(!q&&$('#sheet').open)$('#sheet').close();
+function st(){
+ const p=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Kathmandu',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date()),
+ now=(+p.find(x=>x.type==='hour').value%24)*60+ +p.find(x=>x.type==='minute').value,on=now>=420&&now<1260,left=1260-now,wait=(420-now+1440)%1440;
+ $('#status').classList.toggle('on',on);
+ const sp=$('#status').lastElementChild,long=on?(left<=60?`Closing in ${left} min`:'Open now until 9 PM'):(wait<=60?`Opens in ${wait} min`:'Closed now, opens at 7 AM');
+ sp.textContent=long;sp.dataset.s=on?(left<=60?`Closing in ${left} min`:'Open'):(wait<=60?`Opens in ${wait} min`:'Closed');
 }
-$('#ub').onclick=()=>add(...UPSELL);
-$('#bo').onclick=()=>$('#sheet').showModal();$('#cl').onclick=()=>$('#sheet').close();
-$('#sheet').onclick=e=>{if(e.target===$('#sheet'))$('#sheet').close()};
-document.querySelectorAll('[name=mode]').forEach(r=>r.onchange=()=>{$('#tl').textContent=r.value==='Pickup'?'Pickup time':'Table number';$('#tn').placeholder=r.value==='Pickup'?'e.g. 6:30 PM':'';$('#tn').inputMode=r.value==='Pickup'?'text':'numeric'});
-$('#send').onclick=()=>{
-  const v=Object.values(C).filter(x=>x.q>0),mode=document.querySelector('[name=mode]:checked').value,nm=$('#on').value.trim(),tn=$('#tn').value.trim(),nt=$('#nt').value.trim();
-  const t="Hello Chautari Tea House! I'd like to order ("+mode+"):\n\n"+v.map(x=>`${x.q}x ${x.l} - ${R(x.q*x.p)}`).join('\n')+`\n\nTotal: ${R(v.reduce((a,x)=>a+x.q*x.p,0))}`+(nm?`\nName: ${nm}`:'')+(tn?`\n${mode==='Pickup'?'Pickup time':'Table'}: ${tn}`:'')+(nt?`\nNote: ${nt}`:'');
-  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(t)}`,'_blank');
-};
+st();setInterval(st,60000);
+/* header shrinks on scroll */
+(()=>{const hd=$('#top');let sm=false;addEventListener('scroll',()=>{const y=scrollY;if(!sm&&y>12){sm=true;hd.classList.add('sm')}else if(sm&&y<4){sm=false;hd.classList.remove('sm')}},{passive:true})})();
+
+function photo(box,srcs){const im=new Image();im.alt='';let i=0;
+ im.onload=()=>{box.textContent='';box.append(im)};
+ im.onerror=()=>{if(++i<srcs.length)im.src=srcs[i]};
+ im.src=srcs[0]}
+
+/* home tiles */
+T.forEach(([id,t,sub,ico])=>{
+ const a=document.createElement('a');a.className='tile';a.href='#'+id;
+ a.innerHTML=`<div class="ic">${ico}</div><span><b>${t}</b><small>${sub}</small></span>`;
+ const im=new Image(),c=[`images/menu/tab-${id}.jpg`,`images/tab-${id}.jpg`,`images/menu/tab-${id}.svg`];let k=0;im.alt='';im.onload=()=>a.prepend(im);im.onerror=()=>{if(++k<c.length)im.src=c[k]};im.src=c[0];
+ $('#tiles').append(a);
+});
+
+/* category view */
+function render(t){
+ const [id,title,,ico,secs]=t;
+ $('#pills').innerHTML=T.map(x=>`<a class="pill" href="#${x[0]}"${x[0]===id?' aria-current="true"':''}>${x[3]} ${x[1]}</a>`).join('');
+ const cur=$('#pills .pill[aria-current]');$('#pills').scrollLeft=cur.offsetLeft-($('#pills').clientWidth-cur.offsetWidth)/2;
+ const BK=c=>`<a class="back ${c}" href="#"><span aria-hidden="true">&larr;</span>&nbsp;All categories</a>`;
+ const b=$('#body');b.innerHTML=BK('top2');b.classList.remove('in');void b.offsetWidth;b.classList.add('in');
+ if(id==='hookah')b.insertAdjacentHTML('beforeend',`<div class="hint">${FRI?'Offer on now: 50% off today. Normal Rs. 175, Kaloud Rs. 250.':'50% off every Friday and Saturday: Normal Rs. 175, Kaloud Rs. 250.'}</div>`);
+ secs.forEach(([sec,items])=>{
+  if(secs.length>1)b.insertAdjacentHTML('beforeend',`<h2 class="tagh">${sec}</h2>`);
+  const g=document.createElement('div');g.className='grid';
+  items.forEach(([n,p0,d,pk])=>{
+   const o=FRI&&OFFER[n],p=o||p0,c=document.createElement('div');c.className='card'+(o?' hot':'');
+   c.innerHTML=`<div class="ph">${ico}</div><div class="bd"><div class="nm">${n}${pk?'<span class="pick">Our pick</span>':''}</div>${d?`<div class="ds">${d}</div>`:''}<div class="pc">${o?`<s>${R(p0)}</s>`:''}${R(p)}</div></div>`;
+   const srcs=[`images/menu/${sl(sec)}-${sl(n)}.jpg`];if(FALLBACK[sec])srcs.push(FALLBACK[sec]);
+   photo(c.querySelector('.ph'),srcs);g.append(c);
+  });
+  b.append(g);
+ });
+ b.insertAdjacentHTML('beforeend',BK('end'));
+}
+function route(){
+ const t=T.find(x=>x[0]===location.hash.slice(1));
+ $('#home').hidden=!!t;$('#cat').hidden=!t;
+ if(t){render(t);scrollTo(0,0)}
+}
+/* swipe left/right to move between categories */
+(()=>{let x0,y0,ok=false;const c=$('#cat');
+ c.addEventListener('touchstart',e=>{ok=!e.target.closest('.pills');x0=e.touches[0].clientX;y0=e.touches[0].clientY},{passive:true});
+ c.addEventListener('touchend',e=>{if(!ok)return;const dx=e.changedTouches[0].clientX-x0,dy=e.changedTouches[0].clientY-y0;
+  if(Math.abs(dx)<70||Math.abs(dy)>Math.abs(dx)*.6)return;
+  const i=T.findIndex(t=>t[0]===location.hash.slice(1)),n=i+(dx<0?1:-1);
+  if(n<0)location.hash='';else if(n<T.length)location.hash=T[n][0]},{passive:true});
+})();
+addEventListener('hashchange',route);route();
 </script>
 </body>
 </html>
