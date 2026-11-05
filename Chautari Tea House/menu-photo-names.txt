@@ -1,40 +1,50 @@
-Optional menu photos. Save JPGs in the folder images/menu/ with these exact names:
+Dish photos for the menu. Save JPGs in the folder images/menu/ with these exact names.
+The menu itself (names and prices) is edited in menu-data.js. This list only names the photo files.
 
-milk-tea-plain-tea.jpg   (Plain tea, Milk tea)
-milk-tea-ginger-tea.jpg   (Ginger tea, Milk tea)
-milk-tea-masala-tea.jpg   (Masala tea, Milk tea)
-milk-tea-matka-tea.jpg   (Matka tea, Milk tea)
-black-tea-plain-tea.jpg   (Plain tea, Black tea)
-black-tea-ginger-tea.jpg   (Ginger tea, Black tea)
-black-tea-lemon-tea.jpg   (Lemon tea, Black tea)
-black-tea-masala-tea.jpg   (Masala tea, Black tea)
-black-tea-ginger-lemon-tea.jpg   (Ginger lemon tea, Black tea)
-hot-brews-green-tea.jpg   (Green tea, Hot brews)
-hot-brews-chamomile-tea.jpg   (Chamomile tea, Hot brews)
-hot-brews-peach-tea.jpg   (Peach tea, Hot brews)
-hot-brews-jasmine-tea.jpg   (Jasmine tea, Hot brews)
-hot-brews-hibiscus-tea.jpg   (Hibiscus tea, Hot brews)
-hot-brews-hot-lemon-with-honey.jpg   (Hot lemon with honey, Hot brews)
-cold-cups-lemonade.jpg   (Lemonade, Cold cups)
-cold-cups-cold-lemon.jpg   (Cold lemon, Cold cups)
-cold-cups-plain-lassi.jpg   (Plain lassi, Cold cups)
-cold-cups-iced-peach-tea.jpg   (Iced peach tea, Cold cups)
-cold-cups-virgin-mojito.jpg   (Virgin mojito, Cold cups)
-cold-cups-iced-coffee.jpg   (Iced coffee, Cold cups)
-quick-bites-cookies.jpg   (Cookies, Quick bites)
-quick-bites-veg-pakoda.jpg   (Veg pakoda, Quick bites)
-quick-bites-noodle-sadeko.jpg   (Noodle sadeko, Quick bites)
-quick-bites-cheese-fries.jpg   (Cheese fries, Quick bites)
-quick-bites-periperi-fries.jpg   (PeriPeri fries, Quick bites)
-quick-bites-spicy-spiral-fries.jpg   (Spicy spiral fries, Quick bites)
-heavy-hitters-aalu-chop.jpg   (Aalu chop, Heavy hitters)
-heavy-hitters-peanuts-sadeko.jpg   (Peanuts sadeko, Heavy hitters)
-heavy-hitters-buff-momo.jpg   (Buff momo, Heavy hitters)
-heavy-hitters-chicken-momo.jpg   (Chicken momo, Heavy hitters)
-heavy-hitters-fried-sausages.jpg   (Fried sausages, Heavy hitters)
-hukka-and-smoke-shikar-ice.jpg   (Shikar Ice, Hukka and smoke)
-hukka-and-smoke-surya.jpg   (Surya, Hukka and smoke)
-hukka-and-smoke-additional-coal-normal.jpg   (Additional coal normal, Hukka and smoke)
-hukka-and-smoke-additional-coal-kaloud.jpg   (Additional coal Kaloud, Hukka and smoke)
-hukka-and-smoke-normal-hukka.jpg   (Normal hukka, Hukka and smoke)
-hukka-and-smoke-kaloud-hukka.jpg   (Kaloud hukka, Hukka and smoke)
+milk-tea-plain-tea.jpg
+milk-tea-ginger-tea.jpg
+milk-tea-masala-tea.jpg
+milk-tea-matka-tea.jpg
+black-tea-plain-tea.jpg
+black-tea-ginger-tea.jpg
+black-tea-lemon-tea.jpg
+black-tea-masala-tea.jpg
+black-tea-ginger-lemon-tea.jpg
+hot-brews-green-tea.jpg
+hot-brews-chamomile-tea.jpg
+hot-brews-peach-tea.jpg
+hot-brews-jasmine-tea.jpg
+hot-brews-hibiscus-tea.jpg
+hot-brews-hot-lemon-with-honey.jpg
+hot-coffee-black-coffee.jpg
+hot-coffee-milk-coffee.jpg
+cold-coffee-iced-black-coffee.jpg
+cold-coffee-iced-coffee.jpg
+cold-cups-lemonade.jpg
+cold-cups-cold-lemon.jpg
+cold-cups-plain-lassi.jpg
+cold-cups-iced-peach-tea.jpg
+quick-bites-cookies.jpg
+quick-bites-veg-pakoda.jpg
+quick-bites-noodle-sadeko.jpg
+quick-bites-periperi-fries.jpg
+quick-bites-spicy-spiral-fries.jpg
+heavy-hitters-aalu-chop.jpg
+heavy-hitters-peanuts-sadeko.jpg
+heavy-hitters-buff-momo.jpg
+heavy-hitters-chicken-momo.jpg
+heavy-hitters-fried-sausages.jpg
+hukka-and-smoke-shikar-ice.jpg
+hukka-and-smoke-surya.jpg
+hukka-and-smoke-additional-coal-normal.jpg
+hukka-and-smoke-additional-coal-kaloud.jpg
+hukka-and-smoke-normal-hukka.jpg
+hukka-and-smoke-kaloud-hukka.jpg
+
+Category covers, already in images/:
+tab-tea.jpg
+tab-brews.jpg
+tab-coffee.jpg
+tab-cold.jpg
+tab-snacks.jpg
+tab-hookah.jpg
